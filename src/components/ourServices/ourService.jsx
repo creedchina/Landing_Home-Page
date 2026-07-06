@@ -1,5 +1,5 @@
 import './ourService.css'
-import Service from '../services/service'
+import Service from '../services/Service'
 
 const OurService = () => {
     return (
