@@ -35,7 +35,7 @@
 }
 
 .btn-primary {
-    background-color: rgb(126, 26, 26);
+    background-color: #174db26e;
     color: white;
     border: none;
     border-radius: 8px;
@@ -47,10 +47,10 @@
 }
 
 .btn-primary:hover {
-    background-color: rgb(83, 15, 15);
+    background-color: #0916306e;
 }
 
-.btn-secondary {
+/* .btn-secondary {
     background-color: #6c757d;
     color: white;
     border: none;
@@ -64,7 +64,7 @@
 
 .btn-secondary:hover {
     background-color: #545b62;
-}
+} */
 
 .banner-graphics {
     display: flex;

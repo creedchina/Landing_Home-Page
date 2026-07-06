@@ -13,7 +13,7 @@ const Banner = () => {
             <div className="banner-buttons">
                 <button className="btn-primary">Request Appointment</button>
                 <button className="btn-primary">Learn More</button>
-                <button className="btn-secondary">Contact Us</button>
+                <button className="btn-primary">Contact Us</button>
             </div>
 
             <div className="banner-graphics">

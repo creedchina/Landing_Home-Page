@@ -24,7 +24,7 @@
 }
 
 .navbar-items>h3:hover{
-    color: rgb(126, 26, 26);
+    color: #174db26e;
 }
 
 .side-nav-items{
@@ -40,7 +40,7 @@
 }
 
 .side-nav-items>h3:hover{
-    color: rgb(126, 26, 26);
+    color: #174db26e;
 }
 
 .side-nav-items>img {

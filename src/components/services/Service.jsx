@@ -1,18 +1,26 @@
+import services from '../../assets/services';
 import './Service.css';
 
 const Service = () => {
     return (
+        <>
+        {services.map((service) => (
         <div className="service-container">
-            <h4>Service Name</h4>
 
-                <div className="service-icons"></div>
+                <div className="service-icons">
+                    <img src={service.image} alt="Service Icon" className="service-icon" />
+                </div>
 
-                <div className="service-heading"></div>
+                <div className="service-heading">
+                    <h5>{service.name}</h5>
+                </div>
 
                 <div className="service-details">
-                    <p>Service description goes here.</p>
+                    <p>{service.body}</p>
                 </div>
         </div>
+        ))}
+        </>
     )
 }
 
