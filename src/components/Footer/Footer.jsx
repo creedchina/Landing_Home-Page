@@ -1,4 +1,4 @@
-import "./footer.css"
+import "./Footer.css"
 import footer_image from "../../assets/images/footer_image.avif"
 
 const Footer = () => {
@@ -64,6 +64,6 @@ const Footer = () => {
 
 
     )
-}
+}   
 
 export default Footer
