@@ -1,5 +1,6 @@
 import "./Banner.css"
 import red_blood from "../../assets/images/red_blood.jpg"
+import RequestAppointment from "../Request Appointment/Request Appointment";
 
 const Banner = () => {
     return (
@@ -11,7 +12,7 @@ const Banner = () => {
             </div>
 
             <div className="banner-buttons">
-                <button className="btn-primary">Request Appointment</button>
+                <RequestAppointment />
                 <button className="btn-primary">Learn More</button>
                 <button className="btn-primary">Contact Us</button>
             </div>
