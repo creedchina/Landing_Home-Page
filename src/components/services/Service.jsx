@@ -3,7 +3,8 @@ import './Service.css';
 
 const Service = () => {
     return (
-        <>
+        <div className="services-section">
+
         {services.map((service) => (
         <div className="service-container">
 
@@ -19,8 +20,9 @@ const Service = () => {
                     <p>{service.body}</p>
                 </div>
         </div>
+        
         ))}
-        </>
+        </div>
     )
 }
 

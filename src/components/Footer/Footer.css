@@ -16,7 +16,8 @@
 }
 
 .footer-logo>img {
-    width: 124px;
+    height: fit-content;
+    width: 310px;
 }
 
 .footer-lists {

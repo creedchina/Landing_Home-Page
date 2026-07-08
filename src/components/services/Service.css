@@ -1,12 +1,19 @@
+
+.services-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px 40px;
+
+}
+
 .service-container {
-    float: left;
     background-color: #FFF;
-    gap: 16px;
     border-radius: 10px;
-    padding: 60px 20px 20px 60px;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-    margin: 15px 0px;
+    padding: 5px 20px;
+    flex: 1;
 }
 
 .service-container:hover {
@@ -18,10 +25,10 @@
 .service-heading > h5 {
     font-size: 22px;
     font-weight: 500;
+    margin: 10px 0;
 }
 
 .service-details {
-    width: 15vw;
     font-size: 16px;
     color: #5C5C5C;
 }

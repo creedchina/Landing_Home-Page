@@ -1,0 +1,53 @@
+
+.testimonial-container{
+    text-align: center;
+    padding: 60px 60px;
+}
+
+.testimonial-container>h3{
+    font-size: 36px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 40px;
+}
+
+.testmonial-grid{
+    display: flex;          /* Turns the layout into a flexbox */
+    flex-direction: column;    /* Explicitly forces items to sit side-by-side */
+    justify-content: space-between; /* Spreads them evenly across the row */
+    gap: 20px;                  /* Puts clean space between each card */
+
+}
+
+.testimonial-card{
+    flex: 1;                /* Forces all three cards to be equal width */
+    background-color: #fff;
+    border-radius: 12PX;
+    padding: 30PX 24px;
+}
+
+.testimonial-card>img{
+    width: 310px;
+    height: 348px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.testimonial-card:hover{
+    transition: all 0.3s ease-out;
+    transform: scale(1.05) translateZ(0);
+}
+
+.testimonial-card> p{
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.testimonial-card> span{
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
