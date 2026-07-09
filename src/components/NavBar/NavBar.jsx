@@ -16,23 +16,23 @@ const NavBar = () => {
             </div>
 
             <div className="navbar-items">
-               <Link to = "/"> <h3>Medical Home</h3></Link> 
-               <Link to = "/"> <h3>Medical Services</h3></Link> 
-               <Link to = "/"> <h3>Medical Doctors</h3></Link> 
-               <Link to = "/"> <h3>Medical News</h3></Link> 
-               <Link to = "/Contacts"> <h3>Medical Contacts</h3></Link> 
+               <Link to = "/"> <h4>Home</h4></Link> 
+               <Link to = "/"> <h4>Services</h4></Link> 
+               <Link to = "/"> <h4>Patners</h4></Link> 
+               <Link to = "/"> <h4>News</h4></Link> 
+               <Link to = "/Contacts"> <h4>Contacts</h4></Link> 
             </div>
 
             <div className="side-nav-items"> 
 
                 <Link to = "/Login" className = "Login">
-                    <h3>Login</h3>
+                    <h4>Login</h4>
                 </Link>
                 
                 <img src = {search} alt="Search" className="search" />
 
                 <Link to = "/Register" className="Register">
-                <h3>Register</h3>
+                <h4>Register</h4>
                 </Link>
 
             </div>

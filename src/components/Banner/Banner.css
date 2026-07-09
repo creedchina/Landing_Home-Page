@@ -4,20 +4,12 @@
     justify-content: space-between;
     align-items: center;
     gap: 50px;
-    padding: 60px 40px;
 }
 
-.banner-content {
+.banner-content{
     flex: 1;
     text-align: left;
-}
-
-.banner-content h1 {
-    font-size: 52px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
+    padding: 40px;
 }
 
 .banner-content p {
@@ -28,48 +20,37 @@
     margin-bottom: 2rem;
 }
 
-.banner-buttons {
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    text-align: left;
-}
-
 .btn-primary {
-    background-color: #174db26e;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    font-weight: 600;
+    color: cadetblue;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.btn-primary:hover {
-    background-color: #0916306e;
+a:hover{
+   color: #174EB2;
 }
-
-/* .btn-secondary {
-    background-color: #6c757d;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-secondary:hover {
-    background-color: #545b62;
-} */
 
 .banner-graphics img {
     display: flex;
     position: left;
     width: 500px;
     height: 200px;
+    position: relative;
 }
+
+.banner-kids{
+    display: flex;
+    align-items: center;
+    background-color: cadetblue;
+    gap: 16px;
+}
+
+.banner-pic{
+    width: 120px;           /* Give the image a fixed, predictable size */
+  height: 120px;
+  object-fit: cover;      /* Keeps the image aspect ratio intact */
+  border-radius: 8px;
+}
+
+
