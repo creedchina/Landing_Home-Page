@@ -42,15 +42,6 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                <div className="footer-contact">
-                    <ul className="footer-lists">
-                        <li>Contact</li>
-                        <li>Austin Texas, 4567 Road Palm</li>
-                        <li>+00 123 456 789</li>
-                        <li>medi@test.com</li>
-                    </ul>
-                </div>
-
             </div>
 
             <div className="footer-bottom">

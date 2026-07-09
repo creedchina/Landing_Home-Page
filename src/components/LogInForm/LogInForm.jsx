@@ -15,52 +15,60 @@ export default function LoginForm(){
         e.preventDefault(); 
 
     console.log("Submitting login info:", loginCredentials);
-    alert(`Attempting login for: ${loginCredentials.uname || 'Guest'}`);  };
-    
+    alert(`Attempting login for: ${loginCredentials.uname || 'Guest'}`);  
+    };
     return(
+
+    <div className = "loginform-page-wrapper"> 
 
     <div className="loginform-container">
 
         <h2>Welcome Back</h2>
-        <p>Please Enter your credentials to log in.</p>
- 
-         <div className="login-container">
-            <form onSubmit={handleSubmit} > 
+        <p className = "login-subtitle">Please Enter your credentials to log in.</p>
 
-                <label htmlFor="login-email"><b>Username or Email Address: </b></label>
-                <input type="text" 
+            <form onSubmit={handleSubmit}> 
+
+                <label htmlFor="uname"><b>Username or Email Address: </b></label>
+                <input type="text"
+                id = "uname" 
                 placeholder="Enter Username" 
-                name="uname" required 
+                name="uname" 
+                value = {loginCredentials.uname || ""} 
                 onChange={handleChange}
                 required
                 />
 
-                <label htmlFor="login-password"><b>Password</b></label>
+                <label htmlFor="psw"><b>Password</b></label>
                 <input type="password" 
+                id = "psw"
                 placeholder="Enter Password" 
-                name="psw" required 
-                value = {handleChange} 
+                name="psw"
+                value = {loginCredentials.psw || ""} 
+                onChange = {handleChange} 
                 required
                 />
 
-                <button type="submit">Login</button>
+                <button type="submit" className = "login-btn-primary">Login</button>
 
-           <label className="remember-me-label">
-                <input type="checkbox" 
-                checked={loginCredentials.remember || false}
-                name="remember" 
-                onChange = {handleChange} /> 
-                Remember me
-            </label>
+                <label className="remember-me-label">
+                    <input type="checkbox" 
+                    checked={loginCredentials.remember || false}
+                    name="remember" 
+                    onChange = {handleChange} 
+                    /> 
+                    Remember me
+                </label>
 
-                <div className="container" style={{backgroundColor:"#f1f1f1"}}>
-                <button type="button" onClick={() => document.getElementById('id01').style.display='none'} className="cancelbtn">Cancel</button>
-                <span className="psw">Forgot <a href="#">password?</a></span>
+                <div className="form-footer-actions">
+                    <button type="button" onClick={() => document.getElementById('id01').style.display='none'} 
+                    className="cancelbtn">Cancel</button>
+                    <span className="psw">Forgot <a href="#">password?</a></span>
                 </div>
 
             </form>
+        </div>
     </div>
-</div>
 
     )
-}
+    }
+ 

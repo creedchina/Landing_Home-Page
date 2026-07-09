@@ -20,7 +20,7 @@ const NavBar = () => {
                <Link to = "/"> <h3>Medical Services</h3></Link> 
                <Link to = "/"> <h3>Medical Doctors</h3></Link> 
                <Link to = "/"> <h3>Medical News</h3></Link> 
-               <Link to = "/"> <h3>Medical Contacts</h3></Link> 
+               <Link to = "/Contacts"> <h3>Medical Contacts</h3></Link> 
             </div>
 
             <div className="side-nav-items"> 

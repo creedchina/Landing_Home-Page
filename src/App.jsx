@@ -8,6 +8,7 @@ import Testimonials from './components/Testimonials/Testimonials'
 import Footer from './components/Footer/Footer';
 import UserForm from './components/UserForm/UserForm';
 import LoginForm from './components/LogInForm/LogInForm';
+import Contacts from './components/Contacts/contact';  
 
 const Home = () => (
 
@@ -35,6 +36,8 @@ function App() {
 
             {/* The Landing Page Route */}
             <Route path = "/" element = {<Home />} />
+
+            <Route path="/Contacts" element = {<Contacts />} />
 
             {/* The New Page Route for your Booking Form */}
             <Route path = "/request-appointment" element = {<UserForm />} />
