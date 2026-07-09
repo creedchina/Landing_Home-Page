@@ -7,8 +7,12 @@
 
 }
 .navbar-container a {
-    text-decoration:  nonne;
+    text-decoration: none;
     color: inherit;
+}
+
+.navbar-items> a:hover{
+    color: #174db26e;
 }
 
 .navbar-logo>img{
@@ -28,10 +32,6 @@
     cursor: pointer;
 }
 
-.navbar-items>h3:hover{
-    color: #174db26e;
-}
-
 .side-nav-items{
     display: flex;
     align-items: center;
@@ -45,9 +45,10 @@
     
 }
 
-.side-nav-items>h3:hover{
+.side-nav-items>a:hover{
     color: #174db26e;
 }
+
 
 .side-nav-items>img {
     width: 20px;

@@ -19,7 +19,7 @@ export default function LoginForm(){
     
     return(
 
-    <div class="loginform-container">
+    <div className="loginform-container">
 
         <h2>Welcome Back</h2>
         <p>Please Enter your credentials to log in.</p>
@@ -27,7 +27,7 @@ export default function LoginForm(){
          <div className="login-container">
             <form onSubmit={handleSubmit} > 
 
-                <label for="uname" htmlFor="login-email"><b>Username or Email Address: </b></label>
+                <label htmlFor="login-email"><b>Username or Email Address: </b></label>
                 <input type="text" 
                 placeholder="Enter Username" 
                 name="uname" required 
@@ -35,7 +35,7 @@ export default function LoginForm(){
                 required
                 />
 
-                <label for="psw"><b>Password</b></label>
+                <label htmlFor="login-password"><b>Password</b></label>
                 <input type="password" 
                 placeholder="Enter Password" 
                 name="psw" required 
@@ -53,9 +53,9 @@ export default function LoginForm(){
                 Remember me
             </label>
 
-                <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
+                <div className="container" style={{backgroundColor:"#f1f1f1"}}>
+                <button type="button" onClick={() => document.getElementById('id01').style.display='none'} className="cancelbtn">Cancel</button>
+                <span className="psw">Forgot <a href="#">password?</a></span>
                 </div>
 
             </form>

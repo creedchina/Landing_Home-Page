@@ -7,6 +7,7 @@ import OurDoctors from './components/ourDoctors/ourDoctors';
 import Testimonials from './components/Testimonials/Testimonials'
 import Footer from './components/Footer/Footer';
 import UserForm from './components/UserForm/UserForm';
+import LoginForm from './components/LogInForm/LogInForm';
 
 const Home = () => (
 
@@ -37,6 +38,9 @@ function App() {
 
             {/* The New Page Route for your Booking Form */}
             <Route path = "/request-appointment" element = {<UserForm />} />
+
+            <Route path="/Login" element={<LoginForm />} /> 
+            {/* <Route path="/Register" element={<UserForm />} /> */}
 
         </Routes>
 
