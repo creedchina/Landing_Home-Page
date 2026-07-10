@@ -4,31 +4,66 @@
     justify-content: space-between;
     align-items: center;
     gap: 50px;
+    transition: all 0.3s ease-out;
+    margin-top: 24px;
 }
 
 .banner-content{
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     text-align: left;
-    padding: 40px;
+    padding-left: 40px;
 }
+
+.banner-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    flex: 2;
+}
+
+.banner-grid-secondary {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    flex: 1;
+}
+
+.banner-grids-container {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    margin-top: 2rem;
+}
+
 
 .banner-content p {
     font-size: 20px;
     font-weight: 400;
     color: #555;
     line-height: 1.6;
-    margin-bottom: 2rem;
+    margin: 0 0 1rem 0;
+}
+
+.banner-content h1 {
+    margin: 0 0 1rem 0;
+    font-size: 2.5rem;
 }
 
 .btn-primary {
-    color: cadetblue;
+    color: rgb(105, 21, 21); 
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-bottom: 1.5rem;
 }
 
 a:hover{
-   color: #174EB2;
+    transition: all 0.3s ease-out;
+   transform: scale(1.1) translateZ(0);
+   color: cadetblue;
 }
 
 .banner-graphics img {
@@ -41,16 +76,53 @@ a:hover{
 
 .banner-kids{
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     background-color: cadetblue;
-    gap: 16px;
+    gap: 15px;
+    padding: 24px;
+    border-radius: 8px;
+    margin: 1.5rem 0;
 }
 
-.banner-pic{
-    width: 120px;           /* Give the image a fixed, predictable size */
-  height: 120px;
-  object-fit: cover;      /* Keeps the image aspect ratio intact */
-  border-radius: 8px;
+.banner-kids h3 {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+
+.banner-kids:hover{
+    transition: all 0.3s ease-out;
+    transform: scale(1.05) translateZ(0);
+}
+
+.subtible h3 {
+    margin: 0 0 0.8rem 0;
+    font-size: 1.2rem;
+}
+
+.subtible p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.banner-pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.banner-pic > img{
+    width: 420px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 

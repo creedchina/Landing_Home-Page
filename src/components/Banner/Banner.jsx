@@ -1,9 +1,15 @@
 import "./Banner.css"
-import red_blood from "../../assets/images/red_blood.jpg"
+// import red_blood from "../../assets/images/red_blood.jpg"
 import kid_1 from "../../assets/images/kid_1.jpg"
 import kid_2 from "../../assets/images/kid_2.jpg"
 import kid_3 from "../../assets/images/kid_3.jpg"
+import emergency from "../../assets/images/emergency.jpg"
+import complementary from "../../assets/images/complementary.jpg"
+import before from "../../assets/images/before.jpg"
+import during from "../../assets/images/during.jpg"
+import after from "../../assets/images/after.jpg"
 import { Link } from "react-router-dom";
+import FlipCard from "../flipcard/Flipcard";
 
 const Banner = () => {
     return (
@@ -16,28 +22,96 @@ const Banner = () => {
                 going into hospital can be daunting, <br></br>but Life Healthcare wants you to know that 
                 we are walking every step of the patient journey with you.</p>
 
-                <Link to = "/request-appointment" className = "btn-primary">
+                <Link to="/request-appointment" className="btn-primary">
                     Request an Appointment
                 </Link>
-            </div>
 
-            <div className="banner-graphics">
-                <img src={red_blood} alt="red_blood" />
-            </div>  
-
-            <div className="banner-kids">
+                <div className="banner-kids">
                     <h3>Before, during and after your stay</h3>
-
-                    <div className="banner_pic">
-                    <img src = {kid_1} alt="kid_1"/>
-
-                    <img src = {kid_2} alt="kid_2"/>
-                    
-                    <img src = {kid_3} alt="kid_3"/>
-
+                    <div className="banner-pic">
+                        <img src={before} alt="kid_1"/>
+                        <img src={during} alt="kid_2"/>
+                        <img src={after} alt="kid_3"/>
                     </div>
-                    
+                </div>
+
+                <div className="subtible"> 
+                    <h3>Why choose Medical?</h3>
+                    <p>We are dedicated to compassionate care, clinical excellence, 
+                    quality service and a spirit of giving to those entrusted to our care.</p>
+                </div>
+
+                <div className="banner-grids-container">
+                    <div className="banner-grid">
+                    <FlipCard 
+                        frontTitle="Pre-admission information"
+                        backgroundImage={kid_3}
+                        backTitle="Pre-admission"
+                        backText="Find out everything you need to know before checking into the hospital."
+                        linkTo="/pre-admission"
+                    />
+                    <FlipCard 
+                        frontTitle="Our hospitals"
+                        backTitle="Hospitals & Clinics"
+                        backText="Locate and explore medical facilities nearest to your location."
+                        linkTo="/hospitals"
+                    />
+                    <FlipCard 
+                        frontTitle="Our doctors"
+                        backgroundImage={kid_1}
+                        backTitle="Find a Doctor"
+                        backText="Connect with specialized, world-class healthcare professionals."
+                        linkTo="/doctors"
+                    />
+                    <FlipCard 
+                        frontTitle="Hospital services"
+                        backTitle="Specialized Care"
+                        backText="Explore our dynamic ranges of surgical and emergency medical services."
+                        linkTo="/services"
+                    />
+                    <FlipCard 
+                        frontTitle="Complementary services"
+                        backgroundImage={complementary}
+                        backTitle="Additional Services"
+                        backText="From physical therapy to pharmacies, see how we care for your recovery."
+                        linkTo="/complementary"
+                    />
+                    <FlipCard 
+                        frontTitle="Out-of-hospital services"
+                        backTitle="Home & Chronic Care"
+                        backText="Bringing world-class clinical excellence directly to the comfort of your home."
+                        linkTo="/out-of-hospital"
+                    />
+                    </div>
+
+                    <div className="banner-grid-secondary">
+                    <FlipCard 
+                        frontTitle="Patient Support"
+                        backTitle="Support Services"
+                        backText="24/7 patient support and counseling services to help you through your healthcare journey."
+                        linkTo="/patient-support"
+                    />
+                    <FlipCard 
+                        frontTitle="Emergency Services"
+                        backgroundImage={emergency}
+                        backTitle="Emergency Care"
+                        backText="Rapid response and expert emergency care available round the clock."
+                        linkTo="/emergency"
+                    />
+                    <FlipCard 
+                        frontTitle="Wellness Programs"
+                        backgroundImage={kid_2}
+                        backTitle="Wellness"
+                        backText="Preventive health programs and wellness initiatives to keep you healthy."
+                        linkTo="/wellness"
+                    />
+                    </div>
+                </div>
             </div>
+
+            {/* <div className="banner-graphics">
+                <img src={red_blood} alt="red_blood" />
+            </div> */}
 
         </div>
     );

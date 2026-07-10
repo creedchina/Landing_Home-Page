@@ -17,7 +17,7 @@
 }
 
 .service-container:hover {
-    background-color: #174db26e;
+    background-color: cadetblue;
     transition: all 0.3s ease-out;
     transform: scale(1.1) translateZ(0);
 }
