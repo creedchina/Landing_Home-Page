@@ -11,9 +11,10 @@
     margin-bottom: 40px;
 }
 
-.testmonial-grid{
+.testimonial-grid{
     display: flex;          /* Turns the layout into a flexbox */
-    flex-direction: column;    /* Explicitly forces items to sit side-by-side */
+    flex-direction: row;    /* Explicitly forces items to sit side-by-side */
+    flex-wrap: wrap;
     justify-content: space-between; /* Spreads them evenly across the row */
     gap: 20px;                  /* Puts clean space between each card */
 
@@ -21,7 +22,7 @@
 
 .testimonial-card{
     flex: 1;                /* Forces all three cards to be equal width */
-    background-color: #fff;
+    background-color: cadetblue;
     border-radius: 12PX;
     padding: 30PX 24px;
 }

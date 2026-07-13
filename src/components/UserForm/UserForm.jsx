@@ -33,6 +33,7 @@ alert(`Booking requested for: ${bookingForm.name || 'Guest'} on
       
       <div className = "user-form-container">
       <form onSubmit={handleSubmit}>
+        
         <label htmlFor="username">Name:</label>
         <input type="text" id="username" name="name" />
 

@@ -10,14 +10,10 @@
     font-size: large;
 }
 
-.navbar-container a{
+.navbar-container a:hover{
     text-decoration: none;
-    color: inherit;
-    display: inline-flex;
-}
-
-a:hover{
     color: rgb(105, 21, 21);
+    display: inline-flex;
 }
 
 .navbar-items{
