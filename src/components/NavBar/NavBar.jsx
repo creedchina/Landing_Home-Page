@@ -20,9 +20,9 @@ const NavBar = () => {
 
             <div className="navbar-items">
                <Link to = "/"> <h4>Home</h4></Link> 
-               <Link to = "/"> <h4>Services</h4></Link> 
-               <Link to = "/"> <h4>Patners</h4></Link> 
-               <Link to = "/"> <h4>News</h4></Link> 
+               <Link to = "/services"> <h4>Services</h4></Link> 
+               <Link to = "/patners"> <h4>Patners</h4></Link> 
+               <Link to = "/news"> <h4>News</h4></Link> 
                <Link to = "/Contacts"> <h4>Contacts</h4></Link> 
             </div>
 
@@ -35,16 +35,15 @@ const NavBar = () => {
             <Link to = "/"><img src = {search_icon} alt="search_icon" className="search_icon" /></Link>
             </div>
 
-            <div className="side-nav-items"> 
+            {/* <div className="side-nav-items"> 
                 <Link to = "/Login" className = "Login">
                     <h4>Login</h4>
                 </Link>
-        
                 <Link to = "/Register" className="Register">
                 <h4>Register</h4>
                 </Link>
-
-            </div>
+            </div> */}
+            
         </div>
     )
 }

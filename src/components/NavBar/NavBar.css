@@ -1,19 +1,19 @@
 .navbar-container{
     display: flex;
-    align-items: left;
-    text-align: left;
     justify-content: space-between; 
     margin: auto;
     background-color: cadetblue;
     border-radius: 8px;
     padding: 10px 40px;
     font-size: large;
+    width: 100%;
+    flex-shrink: 0;
+    box-sizing: border-box;
 }
 
 .navbar-container a:hover{
     text-decoration: none;
     color: rgb(105, 21, 21);
-    display: inline-flex;
 }
 
 .navbar-items{
@@ -24,16 +24,15 @@
     text-align: left;
 }
 
-.side-nav-items{
+/* .side-nav-items{
     display: flex; 
     text-align: left;
     gap: 30px;
-}
+} */
 
 .navbar-icons{
       display: flex;
-      align-items: center;
-      gap: 14px;
+      gap: 15px;
 }
 
 .navbar-icons>a img{

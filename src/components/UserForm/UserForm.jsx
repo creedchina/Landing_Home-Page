@@ -1,5 +1,8 @@
 import './UserForm.css';
 import {useState, useEffect} from 'react';
+import before from "../../assets/images/before.jpg"
+import during from "../../assets/images/during.jpg"
+import after from "../../assets/images/after.jpg"
 
 export default function UserForm(){
 
@@ -35,8 +38,13 @@ alert(`Booking requested for: ${bookingForm.name || 'Guest'} on
       <form onSubmit={handleSubmit}>
         
         <label htmlFor="username">Name:</label>
-        <input type="text" id="username" name="name" />
-
+        <input
+        type="text"
+        id="username"
+        name="name"
+        value={bookingForm.name || ""}
+        onChange={handleChange}
+        />
         <label htmlFor="message">Date:</label>
         <input type="date" 
         name="date" 
@@ -48,11 +56,27 @@ alert(`Booking requested for: ${bookingForm.name || 'Guest'} on
         value={bookingForm.time || ""} onChange={handleChange} />
 
         <label htmlFor="message">Message:</label>
-        <textarea id="message" name="message"></textarea>
+
+        <textarea
+          id="message"
+          name="message"
+          value={bookingForm.message || ""}
+          onChange={handleChange}
+        />
 
         <button type="submit">Submit</button>
       </form>
       </div>
+
+        <div className="banner-kids">
+                    <h3>Before, during and after your stay</h3>
+                    <div className="banner-pic">
+                        <img src={before} alt="kid_1"/>
+                        <img src={during} alt="kid_2"/>
+                        <img src={after} alt="kid_3"/>
+                    </div>
+        </div>
+
     </div>
   );
 }

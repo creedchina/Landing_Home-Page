@@ -5,9 +5,7 @@ import kid_2 from "../../assets/images/kid_2.jpg"
 import kid_3 from "../../assets/images/kid_3.jpg"
 import emergency from "../../assets/images/emergency.jpg"
 import complementary from "../../assets/images/complementary.jpg"
-import before from "../../assets/images/before.jpg"
-import during from "../../assets/images/during.jpg"
-import after from "../../assets/images/after.jpg"
+
 import { Link } from "react-router-dom";
 import FlipCard from "../flipcard/Flipcard";
 
@@ -25,15 +23,6 @@ const Banner = () => {
                 <Link to="/request-appointment" className="btn-primary">
                     Request an Appointment
                 </Link>
-
-                <div className="banner-kids">
-                    <h3>Before, during and after your stay</h3>
-                    <div className="banner-pic">
-                        <img src={before} alt="kid_1"/>
-                        <img src={during} alt="kid_2"/>
-                        <img src={after} alt="kid_3"/>
-                    </div>
-                </div>
 
                 <div className="subtible"> 
                     <h3>Why choose Medical?</h3>
