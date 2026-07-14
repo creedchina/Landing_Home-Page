@@ -8,9 +8,10 @@ import LoginForm from './components/LogInForm/LogInForm';
 import Contacts from './components/Contacts/contact';  
 import Patners from './components/ourDoctors/ourDoctors'; 
 import News from './components/Testimonials/Testimonials'; 
-import Service from './components/OurServices/ourService';
+import Services from './components/ourServices/ourService';
 
 const Home = () => (
+    
     <>  
 
     <Banner />
@@ -34,7 +35,7 @@ function App() {
             {/* The Landing Page Route */}
             <Route path = "/" element = {<Home />} />
 
-            <Route path='/services' element = {<Service />} /> 
+            <Route path='/services' element = {<Services />} /> 
 
             <Route path = "/patners" element = {<Patners />} /> 
 
