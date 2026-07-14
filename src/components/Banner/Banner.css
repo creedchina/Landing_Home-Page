@@ -63,7 +63,7 @@
 a:hover{
     transition: all 0.3s ease-out;
    transform: scale(1.1) translateZ(0);
-   color: cadetblue;
+   color: rgb(105, 21, 21);;
 }
 
 .banner-graphics img {

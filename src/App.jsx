@@ -30,26 +30,26 @@ function App() {
         <NavBar />
 
         <main className = 'page-content'>
-        <Routes>
+        {/* Each wrapper div needs an ID that perfectly matches the navbar href */}
+        <div id="home">
+          <Banner />
+        </div>
 
-            {/* The Landing Page Route */}
-            <Route path = "/" element = {<Home />} />
+        <div id="services">
+          <Services />
+        </div>
 
-            <Route path='/services' element = {<Services />} /> 
+        <div id="partners">
+          <Patners />
+        </div>
 
-            <Route path = "/patners" element = {<Patners />} /> 
+        <div id="news">
+          <News />
+        </div>
 
-            <Route path = '/news' element = {<News />} /> 
-
-            <Route path="/Contacts" element = {<Contacts />} />
-
-            {/* The New Page Route for your Booking Form */}
-            <Route path = "/request-appointment" element = {<UserForm />} />
-
-            <Route path="/Login" element={<LoginForm />} /> 
-            {/* <Route path="/Register" element={<UserForm />} /> */}
-
-        </Routes>
+        <div id="contacts">
+          <Contacts />
+        </div>
         </main>
         {/* The Footer stays at the bottom across all pages */}
         <Footer />

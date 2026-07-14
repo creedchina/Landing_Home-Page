@@ -13,3 +13,7 @@ body{
 .page-content{
   flex: 1;  
 }
+
+html{
+  scroll-behavior: smooth;
+}
