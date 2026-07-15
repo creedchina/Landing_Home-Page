@@ -1,5 +1,4 @@
 import "./Banner.css"
-// import red_blood from "../../assets/images/red_blood.jpg"
 import kid_1 from "../../assets/images/kid_1.jpg"
 import kid_2 from "../../assets/images/kid_2.jpg"
 import kid_3 from "../../assets/images/kid_3.jpg"
@@ -13,11 +12,12 @@ const Banner = () => {
     return (
         <div className="banner-container">
 
+            <section id="top-section" className="top-section">
             <div className="banner-content">
                 <h1>Welcome to Our Medical Center</h1>
                 <p>Your health is our priority.</p>
                 <p>What to expect no matter what your age,
-                going into hospital can be daunting, <br></br>but Life Healthcare wants you to know that 
+                going into hospital can be daunting, but Life Healthcare wants you to know that <b/>
                 we are walking every step of the patient journey with you.</p>
 
                 <Link to="/request-appointment" className="btn-primary">
@@ -29,7 +29,10 @@ const Banner = () => {
                     <p>We are dedicated to compassionate care, clinical excellence, 
                     quality service and a spirit of giving to those entrusted to our care.</p>
                 </div>
+                </div>
+                </section>
 
+                
                 <div className="banner-grids-container">
                     <div className="banner-grid">
                     <FlipCard 
@@ -98,11 +101,6 @@ const Banner = () => {
                 </div>
             </div>
 
-            {/* <div className="banner-graphics">
-                <img src={red_blood} alt="red_blood" />
-            </div> */}
-
-        </div>
     );
 };
 

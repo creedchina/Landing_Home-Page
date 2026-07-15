@@ -1,21 +1,73 @@
+/* Base container matching the banner's margins and font styling */
 .ourService-container {
     background-color: rgba(62, 161, 255, 0.04);
+    padding: 60px 40px; /* Aligns with banner padding */
+    margin: 24px 10px;
+    transition: all 0.3s ease-out;
 }
 
-.ourService-container>h3 {
-    text-align: center;
-    font-size: 32px;
-    font-weight: normal;
-    margin-bottom: 5px;
+/* General practitioner small subtitle */
+.ourService-container > h4 {
+    color: rgb(105, 21, 21); /* Matches your signature brand color from the banner buttons */
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 0.8rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
+/* Primary Header - Styled like your banner h1 but keeping a clean size */
+.ourService-container > h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #222; /* Clean, bold header color */
+    line-height: 1.3;
+    margin: 0 0 1.5rem 0;
+    padding-top: 20px;
+}
+
+/* Paragraph Text - Perfectly matching your banner-content p styles */
+.ourService-container p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #555; /* Matched to banner */
+    line-height: 1.6;
+    margin: 0 0 2rem 0;
+    max-width: 800px;
+}
+
+/* Service Grid - Styled like your banner structures with similar gaps */
+.service-grid {
+    display: grid;
+    /* Uses the responsive 3-column setup but inherits the 30px gap from your banner-grids-container */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; 
+    margin-top: 2rem;
+    width: 97%; /* Aligns with your banner grids container width */
+}
+
+/* Individual Card Hover Style matching your 'a:hover' effect */
+.service-grid > * {
+    transition: all 0.3s ease-out;
+}
+
+.service-grid > *:hover {
+    transform: scale(1.03) translateZ(0); /* Subtle lift effect tailored for cards */
+}
+
+/* Bottom elements wrapper spacing */
 .ourService-wrapper {
+    margin-top: 3rem;
     overflow: auto;
-    padding: 0 10px;
 }
 
-.ourService-wrapper::after {
-    content: "";
-    display: table;
-    clear: both;
+/* Mobile adjustments to keep everything fluid */
+@media (max-width: 768px) {
+    .ourService-container {
+        padding: 40px 20px;
+    }
+    
+    .ourService-container > h3 {
+        font-size: 1.8rem;
+    }
 }

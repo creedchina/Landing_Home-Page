@@ -17,6 +17,28 @@
     padding-left: 40px;
 }
 
+.top-section {
+    width: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.62),  rgb(191, 223, 224)), url("../../assets/images/red_blood.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .top-section {
+        min-height: 300px;
+        background-position: center top;
+        padding: 24px 0;
+    }
+}
+
 .banner-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -33,9 +55,8 @@
 
 .banner-grids-container {
     display: flex;
-    gap: 30px;
-    width: 97%;
-    margin-top: 2rem; 
+    gap: 20px;
+    width: 100%; 
 }
 
 

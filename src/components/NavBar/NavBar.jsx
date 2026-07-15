@@ -1,5 +1,6 @@
 import "./NavBar.css"
 import Medical_Log from "../../assets/images/Medical_Log.png"
+import menuIcon from "../../assets/icons/menuIcon.png"
 
 import { Link } from "react-router-dom"
 
@@ -22,13 +23,17 @@ function NavBar(){
                 </Link> 
             </div>
 
-            <div className="navbar-items">
+            <div className="navbar-items">  
                 <a href="#home" onClick={(e) => handleScroll(e, 'home')}>Home</a>
                 <a href="#services" onClick={(e) => handleScroll(e, 'services')}>Services</a>
                 <a href="#partners" onClick={(e) => handleScroll(e, 'partners')}>Partners</a>
                 <a href="#news" onClick={(e) => handleScroll(e, 'news')}>News</a>
                 <a href="#contacts" onClick={(e) => handleScroll(e, 'contacts')}>Contacts</a>
             </div>
+
+            <button className="menu-btn">
+                <img src={menuIcon} alt="menu" />
+            </button>
 
 {/* 
             <div className="navbar-icons">

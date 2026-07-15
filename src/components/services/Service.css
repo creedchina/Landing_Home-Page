@@ -2,11 +2,12 @@
 .services-section{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 30px;
-    padding: 40px 40px;
-
+    padding: 0px;
+    transition: all 0.3s ease-out;
 }
 
 .service-container {
@@ -14,6 +15,9 @@
     border-radius: 10px;
     padding: 5px 20px;
     flex: 1;
+    min-width: 250px; /* Prevents cards from getting too squished before wrapping */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+    transition: all 0.3s ease-out; /* Moved transition here so it animates smooth on hover out too */
 }
 
 .service-container:hover {
@@ -22,13 +26,46 @@
     transform: scale(1.1) translateZ(0);
 }
 
+.service-container:hover .service-heading > h5,
+.service-container:hover .service-details {
+    color: #ffffff;
+}
+
 .service-heading > h5 {
     font-size: 22px;
-    font-weight: 500;
-    margin: 10px 0;
+    font-weight: 600;
+    margin: 15px 0 10px 0;
+    color: #222;
+    transition: color 0.3s ease;
 }
 
 .service-details {
     font-size: 16px;
     color: #5C5C5C;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+    
+}
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .service-container {
+        flex-direction: column;
+        padding: 20px 10px; 
+        gap: 20px;
+    }
+    
+    .service-container {
+        width: 100%; /* Take full width on mobile devices */
+        padding: 20px;
+    }
+    
+    .service-heading > h5 {
+        font-size: 1.3rem; /* Dynamic sizing for headers on mobile */
+    }
 }

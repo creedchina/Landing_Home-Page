@@ -12,11 +12,13 @@ const services = [
         name: "Vaccine",
         body: "Lörem ipsum matkasse vir. Monogedade bevis"
     },
+
     {
         image: treatment,
         name: "Clinic",
         body: "“Compassion Always,” “Health Matters Here,” and “Care You Trust”."
     },
+
     {
         image: selfcare,
         name: "Self Care",
@@ -32,21 +34,26 @@ const services = [
         name: "Treatment",
         body: "“Compassion Always,” “Health Matters Here,” and “Care You Trust”."
     },
+
     {
         image: pethealth,
         name: "Pet Health",
         body: "“Compassion Always,” “Health Matters Here,” and “Care You Trust”."
     },
+
     {
         image: symptoms,
         name: "Symptoms",
         body: "“Compassion Always,” “Health Matters Here,” and “Care You Trust”."
     },
+
     {
         image: checkup,
         name: "Check Up",
         body: "“Compassion Always,” “Health Matters Here,” and “Care You Trust”."
     },
+
+    
 ]
 
 export default services
