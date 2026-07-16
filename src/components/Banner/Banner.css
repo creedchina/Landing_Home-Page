@@ -3,6 +3,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
+    background-color: rgba(62, 161, 255, 0.04);
     gap: 12px;
     transition: all 0.3s ease-out;
     margin: 2px 10px;
@@ -15,16 +16,15 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    text-align: left;
     padding: 2px 0px;
-
+    letter-spacing: 1px;
 }
 
 .banner-content p {
     font-size: 20px;
     font-weight: 400;
     color: #555;
-    margin: 0px 0px 15px 0px;
+    margin: 0px px 15px 0px;
 }
 
 .top-section {
@@ -42,14 +42,6 @@
 
 .mid-section{
     width: 100%;
-}
-
-@media (max-width: 768px) {
-    .top-section {
-        min-height: 300px;
-        background-position: center top;
-        padding: 24px 0;
-    }
 }
 
 .banner-grid {
@@ -77,6 +69,7 @@
     font-weight: 400;
     margin:  2px 10px;
     padding: 0px 2px 0px;
+    letter-spacing: 1px;
 }
 
 .subtitle h3 {
@@ -87,10 +80,8 @@
    font-size: 20px;
     font-weight: 400;
     color: #555;
-    margin: 0px 0px 20px 0px;
+    margin: 0px px 20px 0px;
 }
-
-
 
 .btn-primary {
     color: aliceblue; 
@@ -116,6 +107,33 @@ a:hover{
     position: relative;
 }
 
+@media (max-width: 768px) {
+
+    .banner-grids-container{
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .banner-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .top-section {
+    min-height: 300px;
+    background-position: center top;
+    padding: 24px 0;
+    }
+
+    .mid-section{
+    min-height: 300px;
+    background-position: center top;
+    padding: 24px 0;
+    }
+    
+    .subtitle > h3 {
+        font-size: 1.8rem;
+    } 
+}
 
 
 
