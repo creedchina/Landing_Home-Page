@@ -17,7 +17,7 @@ const Banner = () => {
                 <h1>Welcome to Our Medical Center</h1>
                 <p>Your health is our priority.</p>
                 <p>What to expect no matter what your age,
-                going into hospital can be daunting, but Life Healthcare wants you to know that <b/>
+                going into hospital can be daunting, <b/>but Life Healthcare wants you to know that <b/>
                 we are walking every step of the patient journey with you.</p>
 
                 <Link to="/request-appointment" className="btn-primary">
