@@ -1,7 +1,7 @@
 /* Base container matching the banner's margins and font styling */
 .ourService-container {
     background-color: rgba(62, 161, 255, 0.04);
-    padding: 60px 40px; /* Aligns with banner padding */
+    padding: 2px 0px 2px 0px; /* Aligns with banner padding */
     margin: 24px 10px;
     transition: all 0.3s ease-out;
 }

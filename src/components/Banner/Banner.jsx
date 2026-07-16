@@ -24,15 +24,16 @@ const Banner = () => {
                     Request an Appointment
                 </Link>
 
-                <div className="subtible"> 
+                </div>
+                </section>
+
+                <section id = "mid-section" className="mid-section">
+                <div className="subtitle"> 
                     <h3>Why choose Medical?</h3>
                     <p>We are dedicated to compassionate care, clinical excellence, 
                     quality service and a spirit of giving to those entrusted to our care.</p>
                 </div>
-                </div>
-                </section>
 
-                
                 <div className="banner-grids-container">
                     <div className="banner-grid">
                     <FlipCard 
@@ -99,6 +100,7 @@ const Banner = () => {
                     />
                     </div>
                 </div>
+                </section>
             </div>
 
     );
