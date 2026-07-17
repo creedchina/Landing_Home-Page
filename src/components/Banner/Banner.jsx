@@ -13,29 +13,39 @@ const Banner = () => {
         <div className="banner-container">
 
             <section id="top-section" className="top-section">
-            <div className="banner-content">
-                <h1>Welcome to Our Medical Center</h1>
-                <p>Your health is our priority.</p>
-                <p>What to expect no matter what your age,
-                going into hospital can be daunting, <b/>but Life Healthcare wants you to know that <b/>
-                we are walking every step of the patient journey with you.</p>
 
-                <Link to="/request-appointment" className="btn-primary">
-                    Request an Appointment
-                </Link>
+                <div className="banner-content">
+                    <h1>
+                        Welcome to Our Medical Center
+                    </h1>
+                        <p>
+                            Your health is our priority.
+                        </p>
+                        <p>What to expect no matter what your age,
+                            going into hospital can be daunting, 
+                            but Life Healthcare wants you to know that
+                            we are walking every step of the patient 
+                            journey with you.
+                        </p>
 
+                    <Link to="/request-appointment" className="btn-primary">
+                        Request an Appointment
+                    </Link>
                 </div>
-                </section>
+            </section>
 
-                <section id = "mid-section" className="mid-section">
+            <section id = "mid-section" className="mid-section">
+
                 <div className="subtitle"> 
-                    <h3>Why choose Medical?</h3>
-                    <p>We are dedicated to compassionate care, clinical excellence, 
-                    quality service and a spirit of giving to those entrusted to our care.</p>
+                    <h3>
+                        Why choose Medical?
+                    </h3>
+                        <p>We are dedicated to compassionate care, clinical excellence, 
+                            quality service and a spirit of giving to those entrusted to our care.
+                        </p>
                 </div>
 
-                <div className="banner-grids-container">
-                    <div className="banner-grid">
+                <div className="banner-grid">
                     <FlipCard 
                         frontTitle="Pre-admission information"
                         backgroundImage={kid_3}
@@ -43,12 +53,12 @@ const Banner = () => {
                         backText="Find out everything you need to know before checking into the hospital."
                         linkTo="/pre-admission"
                     />
-                    <FlipCard 
+                    {/* <FlipCard 
                         frontTitle="Our hospitals"
                         backTitle="Hospitals & Clinics"
                         backText="Locate and explore medical facilities nearest to your location."
                         linkTo="/hospitals"
-                    />
+                    /> */}
                     <FlipCard 
                         frontTitle="Our doctors"
                         backgroundImage={kid_1}
@@ -56,12 +66,12 @@ const Banner = () => {
                         backText="Connect with specialized, world-class healthcare professionals."
                         linkTo="/doctors"
                     />
-                    <FlipCard 
+                    {/* <FlipCard 
                         frontTitle="Hospital services"
                         backTitle="Specialized Care"
                         backText="Explore our dynamic ranges of surgical and emergency medical services."
                         linkTo="/services"
-                    />
+                    /> */}
                     <FlipCard 
                         frontTitle="Complementary services"
                         backgroundImage={complementary}
@@ -69,15 +79,13 @@ const Banner = () => {
                         backText="From physical therapy to pharmacies, see how we care for your recovery."
                         linkTo="/complementary"
                     />
-                    <FlipCard 
+                    {/* <FlipCard 
                         frontTitle="Out-of-hospital services"
                         backTitle="Home & Chronic Care"
                         backText="Bringing world-class clinical excellence directly to the comfort of your home."
                         linkTo="/out-of-hospital"
-                    />
-                    </div>
+                    /> */}
 
-                    <div className="banner-grid-secondary">
                     <FlipCard 
                         frontTitle="Patient Support"
                         backTitle="Support Services"
@@ -98,10 +106,10 @@ const Banner = () => {
                         backText="Preventive health programs and wellness initiatives to keep you healthy."
                         linkTo="/wellness"
                     />
-                    </div>
                 </div>
-                </section>
-            </div>
+            </section>
+
+        </div>
 
     );
 };

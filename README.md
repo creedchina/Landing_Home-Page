@@ -14,3 +14,17 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+Medical Landing-page Structuters Flow:
+
+1. Hero
+2. Trusted by Patients / Why Choose Us
+3. Services
+4. Meet Our Doctors
+5. Appointment Process
+6. Testimonials
+7. Latest Medical News
+8. FAQ
+9. Contact
+10. Footer

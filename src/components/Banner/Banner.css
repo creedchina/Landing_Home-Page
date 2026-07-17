@@ -39,7 +39,7 @@
     box-sizing: border-box;
     width: 100%;   
     min-height: 85vh; 
-    border-radius: 18px;
+    border-radius: 5px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -47,25 +47,26 @@
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 50px
+    padding: 50px; 
+    margin-bottom: 25px;
 }
 
 .mid-section{
+    display: flex;
     width: 100%;
+    min-height: 80vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    margin-top: 25px;
+    
 }
 
 .banner-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
     flex: 2;
-}
-
-.banner-grid-secondary {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    flex: 1;
 }
 
 .banner-grids-container {
@@ -73,6 +74,8 @@
     gap: 20px;
     width: 100%; 
     box-sizing: border-box;
+    flex: 1;
+    align-items: stretch;
 }
 
 .subtitle {
@@ -124,12 +127,14 @@ a:hover{
 @media (max-width: 768px) {
 
     .banner-grids-container{
-        flex-direction: column;
-        gap: 20px;
+        display: block;
     }
     
     .banner-grid{
+        display:  grid;
         grid-template-columns: 1fr;
+        gap: 20px;
+        width: 100%;
     }
 
     .top-section {
@@ -139,7 +144,7 @@ a:hover{
     }
 
     .mid-section{
-    min-height: 60vh;
+    min-height: auto;
     background-position: center top;
     padding: 24px 15px;
     }
