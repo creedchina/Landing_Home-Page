@@ -17,3 +17,12 @@ body{
 html{
   scroll-behavior: smooth;
 }
+
+/* Prevent sticky navbar from covering section headings on anchor scroll */
+#home,
+#services,
+#partners,
+#news,
+#contacts {
+  scroll-margin-top: 120px;
+}
