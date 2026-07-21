@@ -20,6 +20,7 @@ html{
 
 /* Prevent sticky navbar from covering section headings on anchor scroll */
 #home,
+#about,
 #services,
 #partners,
 #news,

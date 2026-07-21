@@ -4,7 +4,7 @@ import before from "../../assets/images/before.jpg"
 import during from "../../assets/images/during.jpg"
 import after from "../../assets/images/after.jpg"
 
-export default function UserForm(){
+export default function UserForm({ onClose }){
 
   const [bookingForm, setBookingForm] = useState(() => {
     const savedData = localStorage.getItem("bookingApplication"); 
@@ -24,48 +24,94 @@ export default function UserForm(){
 
   const handleSubmit = (e) => { 
     e.preventDefault();   
-alert(`Booking requested for: ${bookingForm.name || 'Guest'} on 
-                              ${bookingForm.date || 'no date chosen'} at 
-                              ${bookingForm.time || 'no time chosen'}`);  
+      if(!bookingForm.name){
+        alert("Please enter your Name."); 
+        return; 
+      }
+      if(!bookingForm.date){
+        alert("Please select a date");
+        return; 
+      }
+      if(!bookingForm.time){
+        alert('Please select a time'); 
+        return; 
+      }
+      if(!bookingForm.message){
+        alert("Please enter a message."); 
+        return; 
+      }
   }; 
 
   return (
     <div className="user-form">
+ 
+        <button
+            type='button'
+            className='close-btn'
+            onClick={onClose}
+            >
+              X
+        </button>
 
-      <h2>User Information</h2>
+      <h2>
+        User Information
+      </h2>
+
+      <div className='content'>
       
       <div className = "user-form-container">
-      <form onSubmit={handleSubmit}>
         
-        <label htmlFor="username">Name:</label>
-        <input
-        type="text"
-        id="username"
-        name="name"
-        value={bookingForm.name || ""}
-        onChange={handleChange}
-        />
-        <label htmlFor="message">Date:</label>
-        <input type="date" 
-        name="date" 
-        value={bookingForm.date || ""} onChange={handleChange} />
+        <form onSubmit={handleSubmit}>
+        
+          <label htmlFor="username">
+            Name:
+          </label>
+        
+          <input
+            type="text"
+            id="username"
+            name="name"
+            value={bookingForm.name || ""}
+            onChange={handleChange}
+            />
+        
+          <label htmlFor="message">
+            Date:
+          </label>
+        
+          <input 
+            type="date" 
+            name="date" 
+            value={bookingForm.date || ""} onChange={handleChange} 
+            />
             
-        <label htmlFor="message">Time:</label>
-        <input type="time" 
-        name="time" 
-        value={bookingForm.time || ""} onChange={handleChange} />
+          <label htmlFor="message">
+            Time:
+          </label>
 
-        <label htmlFor="message">Message:</label>
+          <input 
+            type="time" 
+            name="time" 
+            value={bookingForm.time || ""} onChange={handleChange} 
+            />
 
-        <textarea
-          id="message"
-          name="message"
-          value={bookingForm.message || ""}
-          onChange={handleChange}
-        />
+          <label htmlFor="message">
+            Message:
+          </label>
 
-        <button type="submit">Submit</button>
-      </form>
+          <textarea
+            id="message"
+            name="message"
+            value={bookingForm.message || ""}
+            onChange={handleChange}
+          />
+
+          <button 
+            type="submit">
+              Submit
+          </button>
+        </form>
+      </div>
       </div>
 
         <div className="banner-kids">

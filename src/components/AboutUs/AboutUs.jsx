@@ -1,38 +1,14 @@
-import "./Banner.css"
+import './AboutUs.css'
 import kid_1 from "../../assets/images/kid_1.jpg"
 import kid_2 from "../../assets/images/kid_2.jpg"
 import kid_3 from "../../assets/images/kid_3.jpg"
 import emergency from "../../assets/images/emergency.jpg"
-import complementary from "../../assets/images/complementary.jpg"
-
-import { Link } from "react-router-dom";
+import complementary from "../../assets/images/complementary.jpg"; 
 import FlipCard from "../flipcard/Flipcard";
 
-const Banner = () => {
+const AboutUs = () => {
     return (
-        <div className="banner-container">
-
-            <section id="top-section" className="top-section">
-
-                <div className="banner-content">
-                    <h1>
-                        Welcome to Our Medical Center
-                    </h1>
-                        <p>
-                            Your health is our priority.
-                        </p>
-                        <p>What to expect no matter what your age,
-                            going into hospital can be daunting, 
-                            but Life Healthcare wants you to know that
-                            we are walking every step of the patient 
-                            journey with you.
-                        </p>
-
-                    <Link to="/request-appointment" className="btn-primary">
-                        Request an Appointment
-                    </Link>
-                </div>
-            </section>
+        <div className="aboutus-container">
 
             <section id = "mid-section" className="mid-section">
 
@@ -45,7 +21,7 @@ const Banner = () => {
                         </p>
                 </div>
 
-                <div className="banner-grid">
+                <div className="aboutus-grid">
                     <FlipCard 
                         frontTitle="Pre-admission information"
                         backgroundImage={kid_3}
@@ -108,10 +84,9 @@ const Banner = () => {
                     />
                 </div>
             </section>
-
         </div>
-
     );
-};
+}; 
+export default AboutUs
 
-export default Banner;
+  
