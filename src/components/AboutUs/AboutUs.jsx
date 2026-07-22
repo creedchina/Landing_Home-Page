@@ -1,92 +1,99 @@
 import './AboutUs.css'
-import kid_1 from "../../assets/images/kid_1.jpg"
-import kid_2 from "../../assets/images/kid_2.jpg"
-import kid_3 from "../../assets/images/kid_3.jpg"
-import emergency from "../../assets/images/emergency.jpg"
-import complementary from "../../assets/images/complementary.jpg"; 
-import FlipCard from "../flipcard/Flipcard";
+import { FaUserDoctor } from "react-icons/fa6";
+import { useEffect, useRef, useState } from "react";
+import aboutMetrics from '../../assets/aboutMetrics'
+import AnimatedCounter from '../AnimatedCounter/AnimatedCounter';
+import medical_Patient_2 from '../../assets/images/medical_Patient_2.jpg'
 
 const AboutUs = () => {
+    const [isVisible, setIsVisible] = useState(false);
+    const aboutRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting) {
+                    setIsVisible(true);
+                    observer.disconnect();
+                }
+            },
+            {
+                threshold: 0.3
+            }
+        );
+
+        if (aboutRef.current) {
+            observer.observe(aboutRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
-        <div className="aboutus-container">
+        <section ref={aboutRef} className='about'>
+            <div className='about-body'>
+                <div className={`about-image ${isVisible ? "show" : ""}`}>
+                    <img src={medical_Patient_2} alt="Nurse with patient" />
 
-            <section id = "mid-section" className="mid-section">
+                    <div className='floating-badge'>
+                        <span className="badge-icon">
+                            <FaUserDoctor />
+                        </span>
 
-                <div className="subtitle"> 
-                    <h3>
-                        Why choose Medical?
-                    </h3>
-                        <p>We are dedicated to compassionate care, clinical excellence, 
-                            quality service and a spirit of giving to those entrusted to our care.
+                        <div className="badge-text">
+                            <h4>24/7 Care</h4>
+                            <p>Always Here For You</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={`about-content ${isVisible ? "show" : ""}`}>
+                    <div className={`about-header ${isVisible ? "show" : ""}`}>
+                        <span className="section-tag">
+                            ABOUT US
+                        </span>
+
+                        <h2>
+                            Compassionate Healthcare
+                            <br />
+                            Built Around Your Well-Being
+                        </h2>
+                    </div>
+
+                    <div className={`about-text ${isVisible ? "show" : ""}`}>
+                        <p>
+                            We believe every patient deserves compassionate,
+                            timely, and professional healthcare. Our team is
+                            committed to making quality medical care accessible
+                            while putting your health first.
                         </p>
+                    </div>
                 </div>
+            </div>
 
-                <div className="aboutus-grid">
-                    <FlipCard 
-                        frontTitle="Pre-admission information"
-                        backgroundImage={kid_3}
-                        backTitle="Pre-admission"
-                        backText="Find out everything you need to know before checking into the hospital."
-                        linkTo="/pre-admission"
-                    />
-                    {/* <FlipCard 
-                        frontTitle="Our hospitals"
-                        backTitle="Hospitals & Clinics"
-                        backText="Locate and explore medical facilities nearest to your location."
-                        linkTo="/hospitals"
-                    /> */}
-                    <FlipCard 
-                        frontTitle="Our doctors"
-                        backgroundImage={kid_1}
-                        backTitle="Find a Doctor"
-                        backText="Connect with specialized, world-class healthcare professionals."
-                        linkTo="/doctors"
-                    />
-                    {/* <FlipCard 
-                        frontTitle="Hospital services"
-                        backTitle="Specialized Care"
-                        backText="Explore our dynamic ranges of surgical and emergency medical services."
-                        linkTo="/services"
-                    /> */}
-                    <FlipCard 
-                        frontTitle="Complementary services"
-                        backgroundImage={complementary}
-                        backTitle="Additional Services"
-                        backText="From physical therapy to pharmacies, see how we care for your recovery."
-                        linkTo="/complementary"
-                    />
-                    {/* <FlipCard 
-                        frontTitle="Out-of-hospital services"
-                        backTitle="Home & Chronic Care"
-                        backText="Bringing world-class clinical excellence directly to the comfort of your home."
-                        linkTo="/out-of-hospital"
-                    /> */}
+            <div className={`about-metrics ${isVisible ? "show" : ""}`}>
+                {aboutMetrics.map((metric, index) => (
+                    <div
+                        className={`metric ${isVisible ? "show" : ""}`}
+                        key={metric.label}
+                        style={{ transitionDelay: `${0.5 + index * 0.15}s` }}
+                    >
+                        <span className='metric-value'>
+                            <AnimatedCounter
+                                end={metric.value}
+                                suffix={metric.suffix}
+                                isVisible={isVisible}
+                            />
+                        </span>
 
-                    <FlipCard 
-                        frontTitle="Patient Support"
-                        backTitle="Support Services"
-                        backText="24/7 patient support and counseling services to help you through your healthcare journey."
-                        linkTo="/patient-support"
-                    />
-                    <FlipCard 
-                        frontTitle="Emergency Services"
-                        backgroundImage={emergency}
-                        backTitle="Emergency Care"
-                        backText="Rapid response and expert emergency care available round the clock."
-                        linkTo="/emergency"
-                    />
-                    <FlipCard 
-                        frontTitle="Wellness Programs"
-                        backgroundImage={kid_2}
-                        backTitle="Wellness"
-                        backText="Preventive health programs and wellness initiatives to keep you healthy."
-                        linkTo="/wellness"
-                    />
-                </div>
-            </section>
-        </div>
+                        <span className='metric-label'>
+                            {metric.label}
+                        </span>
+                    </div>
+                ))}
+            </div>
+        </section>
     );
-}; 
-export default AboutUs
+};
 
-  
+export default AboutUs;
