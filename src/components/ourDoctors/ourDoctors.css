@@ -1,7 +1,7 @@
 .doctors-container {
     position: relative;
     text-align: center;
-    margin: 12px 0;
+    margin: 22px 0;
     padding: 0 var(--page-gutter) 24px;
     overflow: hidden;
     background-color:rgba(62, 161, 255, 0.04);
@@ -35,10 +35,10 @@
 }
 
 .doctors-wrapper {
-    padding: 44px;
+    padding: 12px;
     display: flex;
     flex-wrap: wrap;
-    gap: 42px;
+    gap: 30px;
     justify-content: center;
 }
 

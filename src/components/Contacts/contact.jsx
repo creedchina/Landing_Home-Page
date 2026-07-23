@@ -33,75 +33,81 @@ export default function Contact() {
 
   return (
     <div className='contact-us-container'>
-      <h2>Contact Us</h2>
 
+      <span className = 'section-tag'>Contact Us</span>
       <div className='contact-us-content'>
-        <h2>Get in Touch</h2>
 
-        <p className='subtitle'>
-          Have questions or need medical assistance? <b>Our friendly team is here to help.</b>
-          For feedback on our quality of service – please use the contact form. <b>
-            We will direct your message to the correct team and get back to you within 48 hours.</b>
-          If you have not received a response, please leave a message on 011 219 9111.
-        </p>
+        
+
+          <p className='subtitle'>
+            <b>Have questions or need medical assistance?</b> <br/>
+            Our friendly team is here to help.
+            For feedback on our quality of service – please use the contact form. <br/>
+            We will direct your message to the correct team and get back to you within 48 hours.<br/>
+            If you have not received a response, please leave a message on 011 219 9111.
+          </p>
 
         <form onSubmit={handleSubmit}>
 
           <div className='contact-form'>
             <label htmlFor='name'>Name:</label>
-            <input
-              type='text'
-              id='name'
-              name='name'
-              value={contactForm.name}
-              onChange={handleChange}
-            />
+                <input
+                type='text'
+                id='name'
+                name='name'
+                value={contactForm.name}
+                onChange={handleChange}
+              />
 
             <label htmlFor='surname'>Surname:</label>
-            <input
-              type='text'
-              id='surname'
-              name='surname'
-              value={contactForm.surname}
-              onChange={handleChange}
-            />
+              <input
+                type='text'
+                id='surname'
+                name='surname'
+                value={contactForm.surname}
+                onChange={handleChange}
+              />
 
             <label htmlFor='email'>Email:</label>
-            <input
-              type='email'
-              id='email'
-              name='email'
-              value={contactForm.email}
-              onChange={handleChange}
-            />
+              <input
+                type='email'
+                id='email'
+                name='email'
+                value={contactForm.email}
+                onChange={handleChange}
+              />
 
             <label htmlFor='date'>Admission Date:</label>
-            <input
-              type='date'
-              id='date'
-              name='date'
-              value={contactForm.date}
-              onChange={handleChange}
-            />
+              <input
+                type='date'
+                id='date'
+                name='date'
+                value={contactForm.date}
+                onChange={handleChange}
+              />
 
-            <label htmlFor='message'>Query:</label>
-            <textarea
-              id='message'
-              name='message'
-              value={contactForm.query}
-              onChange={handleChange}
-            />
+            <label htmlFor='query'>Query:</label>
+              <textarea
+                id='query'
+                name='query'
+                value={contactForm.query}
+                onChange={handleChange}
+              />
 
-            <button type='submit'>Submit</button>
+            <button
+                type='submit'>Submit
+            </button>
           </div>
         </form>
+
+
 
         <div className='contact-lists'>
           <h2>Head Office</h2>
 
           <p className='subtitle'>
             Please note that our office hours are from 08h00 to 16h30 on weekdays. <b>
-              Numbers below are only available during office hours.</b>
+            Numbers below are only available during office hours.</b>
           </p>
 
           <div className='contact-list-section'>

@@ -8,9 +8,8 @@
     background-color:rgba(62, 161, 255, 0.04);
     gap: 12px; 
     transition: all 0.3s ease-out;
-    margin: 5px 0;
+    margin: 22px 0;
     padding: 0 var(--page-gutter) 5px;
-
     min-height: 80vh;
     width: 100%;
     box-sizing: border-box;
@@ -28,7 +27,7 @@
 /* Primary Header - Styled like your banner h1 but keeping a clean size */
 .ourService-container > h3 {
     font-size: 1.8rem;
-    margin: 10px 0 22px;
+    margin: 5px 0 5px;
     line-height: 1.2;
     color: #1f2937;
     /* color: red; */
@@ -68,7 +67,7 @@
     transition: background-color 0.3s ease;
     text-align: center;
     align-self: center;
-    margin: 30px;
+    margin-top: 30px;
 }
 
 .btn-explore:hover,

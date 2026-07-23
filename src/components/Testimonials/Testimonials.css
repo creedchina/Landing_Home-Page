@@ -1,14 +1,14 @@
 
 .testimonial-container{
     text-align: center;
+    margin: 22px 0;
     padding: 60px var(--page-gutter);
 }
 
 .testimonial-container>h3{
-    font-size: 36px;
+    font-size: 1.8rem;
     font-weight: 600;
     color: #1f2937; 
-    margin-bottom: 40px;
 }
 
 .testimonial-grid{
@@ -23,8 +23,8 @@
 .testimonial-card{
     flex: 1;                /* Forces all three cards to be equal width */
     background-color: cadetblue;
-    border-radius: 12PX;
-    padding: 30PX 24px;
+    border-radius: 12px;
+    padding: 30px 24px;
 }
 
 .testimonial-card>img{
@@ -44,7 +44,6 @@
     color: #555;
     line-height: 1.6;
     font-style: italic;
-    margin-bottom: 15px;
 }
 
 .testimonial-card> span{
