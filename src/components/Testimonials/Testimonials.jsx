@@ -8,7 +8,11 @@ const Testimonials = () => {
     return(
         <div className="testimonial-container">
 
-                <h3>What Our Patient Say</h3>
+            <span className='section-tag'>Testimonials</span>
+
+                <h3>The heart of our practice lies in 
+                    <br />
+                the lives we touch and the trust we build every day.</h3>
 
         <div className="testimonial-grid">
 
