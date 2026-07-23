@@ -3,12 +3,17 @@
     text-align: center;
     margin: 22px 0;
     padding: 60px var(--page-gutter);
+    background-color: transparent;
 }
 
 .testimonial-container>h3{
     font-size: 1.8rem;
     font-weight: 600;
     color: #1f2937; 
+}
+
+.section-tag {
+    color: cadetblue;
 }
 
 .testimonial-grid{

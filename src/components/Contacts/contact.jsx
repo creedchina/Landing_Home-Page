@@ -100,47 +100,17 @@ export default function Contact() {
           </div>
         </form>
 
-
-
         <div className='contact-lists'>
-          <h2>Head Office</h2>
 
           <p className='subtitle'>
             Please note that our office hours are from 08h00 to 16h30 on weekdays. <b>
             Numbers below are only available during office hours.</b>
           </p>
 
-          <div className='contact-list-section'>
-            <h3>Physical Address</h3>
-            <ul>
-              <li>Oxford Parks</li>
-              <li>203 Oxford Road (corner</li>
-              <li>Eastwood & Oxford Roads)</li>
-              <li>Cape Town, South Africa</li>
-            </ul>
-          </div>
 
-          <div className='contact-list-section'>
-            <h3>Postal Address</h3>
-            <ul>
-              <li>Oxford Parks</li>
-              <li>203 Oxford Road (corner</li>
-              <li>Eastwood & Oxford Roads)</li>
-              <li>Cape Town, South Africa</li>
-            </ul>
-          </div>
-
-          <div className='contact-list-section'>
-            <h3>Hours</h3>
-            <ul>
-              <li>Monday – Friday: 08:00 – 17:00</li>
-              <li>Saturday: 08:00 – 13:00</li>
-              <li>Sunday: Closed</li>
-            </ul>
           </div>
         </div>
       </div>
-    </div>
   )
 }
 

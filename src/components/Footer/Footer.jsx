@@ -38,6 +38,40 @@ const Footer = () => {
                     </ul>
                 </div>
 
+                <div className='footer-address'>
+
+                    <ul className="footer-lists">
+                        <li>Physical Address</li>
+                        <li>Oxford Parks</li>
+                        <li>203 Oxford Road (corner</li>
+                        <li>Eastwood & Oxford Roads)</li>
+                        <li>Cape Town, South Africa</li>
+                        </ul>
+                </div>
+
+                <div className='footer-hours'>
+
+                    <ul className="footer-lists">
+                    <li>Hours</li>
+                    <li>Monday – Friday: 08:00 – 17:00</li>
+                    <li>Saturday: 08:00 – 13:00</li>
+                    <li>Sunday: 08:00 – 13:00</li>
+                    </ul>
+                </div>
+
+{/*                 
+                <div className='footer-postal-address'>
+                    
+                    <ul className="footer-lists">
+
+                        <h3>Postal Address</h3>
+                        <li>Oxford Parks</li>
+                        <li>203 Oxford Road (corner</li>
+                        <li>Eastwood & Oxford Roads)</li>
+                        <li>Cape Town, South Africa</li>
+                    </ul>
+                </div> */}
+
                 <div className="footer-social-media">
 
                     <ul className="footer-lists">

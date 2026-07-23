@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: 24px;
     padding: 10px 20px;
-    background: rgba(62, 161, 255, 0.04);
+    background:transparent;
     overflow: hidden;
 }
 

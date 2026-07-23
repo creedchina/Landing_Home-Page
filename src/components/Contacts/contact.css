@@ -5,6 +5,7 @@
     align-items: center;
     padding: 40px 20px;
     margin: 22px 0;
+    background-color: transparent;
 }
 
 .contact-us-content{
@@ -12,7 +13,7 @@
     max-width: 900px;
 }
 
-.contact-list{
+.contact-lists{
     display: flex;
     justify-content: space-evenly;
     width: 100%;
@@ -54,9 +55,9 @@ form{
 }
 
 .contact-form > button{
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 400;
-    padding: 12px 20px;
+    padding: 10px 20px;
     border-radius: 12px;
     cursor: pointer;
     color: aliceblue; 

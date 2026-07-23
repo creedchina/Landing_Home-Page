@@ -4,7 +4,7 @@
     margin: 22px 0;
     padding: 0 var(--page-gutter) 24px;
     overflow: hidden;
-    background-color:rgba(62, 161, 255, 0.04);
+    background-color:transparent;
 }
 
 .doctors-container>h2 {
@@ -17,6 +17,10 @@
 .doctors-container>p {
     text-align: center;
     color: #5C5C5C;
+}
+
+.section-tag {
+    color: cadetblue;
 }
 
 .sphere2, .sphere3 {
@@ -43,9 +47,9 @@
 }
 
 .doctors-container>button {
-    font-size: 30px;
+    font-size: 22px;
     font-weight: 400;
-    padding: 20px 40px;
+    padding: 10px 20px;
     border-radius: 12px;
     cursor: pointer;
     color: aliceblue; 
