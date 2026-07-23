@@ -1,6 +1,6 @@
 .doctor-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 24px;
     cursor: pointer;
     transition: all 0.3s ease-out;
@@ -15,7 +15,7 @@
     width: 310px;
     height: 348px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .doctor-details {
@@ -23,6 +23,7 @@
 }
 
 .doctor-details>h6 {
+    color: #1f2937;
     font-size: 20px;
     font-weight: 500;
 }

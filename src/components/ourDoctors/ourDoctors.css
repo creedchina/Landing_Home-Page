@@ -7,11 +7,8 @@
     background-color:rgba(62, 161, 255, 0.04);
 }
 
-.doctors-container>h3 {
-    text-align: center;
-    font-weight: normal;
-    margin-bottom: 30px;
-    font-size: 3rem;
+.doctors-container>h2 {
+    font-size: 1.8rem;
     margin: 10px 0 22px;
     line-height: 1.2;
     color: #1f2937;
@@ -46,15 +43,17 @@
 }
 
 .doctors-container>button {
+    font-size: 30px;
+    font-weight: 400;
     padding: 20px 40px;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
-    color: cadetblue; 
-    background-color: #FFF;
-    border: 1px solid cadetblue;
+    color: aliceblue; 
+    background-color: cadetblue;
+    border: 2px solid aliceblue;
 }
 
 .doctors-container>button:hover {
-    color: #FFF;
+    color: aliceblue;
     background-color: cadetblue;
 }

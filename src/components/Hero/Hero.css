@@ -7,8 +7,8 @@
     background-color: rgba(62, 161, 255, 0.04);
     gap: 12px;
     transition: all 0.3s ease-out;
-    margin: 0 0 5px;
-    padding: 0 var(--page-gutter) 5px;
+    margin: 0;
+    padding: 0;
 }
 
 .banner-content{
@@ -22,6 +22,7 @@
 }
 
 .banner-content h1{
+    color: #1f2937;
     text-align: left;
     font-size: 70px;
     font-weight: 400;
@@ -30,7 +31,7 @@
 .banner-content p {
     font-size: 30px;
     font-weight: 400;
-    color: #555;
+    color: #1f2937;
     margin: 0px 0px 15px 0px;
 }
 
@@ -38,7 +39,7 @@
     box-sizing: border-box;
     width: 100%;   
     min-height: 85vh; 
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -46,8 +47,8 @@
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 50px; 
-    margin-bottom: 25px;
+    padding: 50px var(--page-gutter);
+    margin-bottom: 0;
 }
 
 .btn-primary {
@@ -59,14 +60,16 @@
     background-color: cadetblue;
     padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     margin-top: 100px;
 }
 
-a:hover{
-   transition: all 0.3s ease-out;
-   transform: scale(1.1) translateZ(0);
-   color: inherit;
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    color: aliceblue;
+    background-color: cadetblue;
+    transition: all 0.3s ease-out;
+    transform: scale(1.1) translateZ(0);
 }
 
 @media (max-width: 768px) {
@@ -85,7 +88,7 @@ a:hover{
     .top-section {
     min-height: 300px;
     background-position: center top;
-    padding: 24px 0;
+    padding: 24px var(--page-gutter);
     }
 
     .mid-section{
