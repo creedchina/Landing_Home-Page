@@ -1,5 +1,5 @@
 import "./Footer.css"
-import footer_image from "../../assets/images/footer_image.avif"
+import Medical_Log from "../../assets/images/Medical_Log.png"
 // import facebook_icon from "../../assets/icons/facebook_icon.png"
 // import insta_icon from "../../assets/icons/insta_icon.png"
 // import linkedIn_icon from "../../assets/icons/linkedIn_icon.png"
@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="footer-container">
 
                 <div className="footer-logo">
-                    <img src={footer_image} alt="footer_image" />
+                    <img src={Medical_Log} alt="footer_image" />
                     <p>We are a medical clinic,<br />helping you for a better life.</p>
                 </div>
 
@@ -90,7 +90,7 @@ const Footer = () => {
             </div>
 
             <div className="footer-bottom">
-                <p>&copy; Medic 2028</p>
+                <p> Medic 2026</p>
                 <p>Legal Policies</p>
                 <p>Sitemap</p>
                 <p>Cookies</p>

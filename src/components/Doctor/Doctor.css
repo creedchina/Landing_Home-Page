@@ -1,9 +1,10 @@
 .doctor-container {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 22px;
     cursor: pointer;
     transition: all 0.3s ease-out;
+    
 }
 
 .doctor-container:hover {
@@ -12,8 +13,8 @@
 }
 
 .doctor-image>img {
-    width: 310px;
-    height: 348px;
+    width: 370px;
+    height: 410px;
     object-fit: cover;
     border-radius: 12px;
 }

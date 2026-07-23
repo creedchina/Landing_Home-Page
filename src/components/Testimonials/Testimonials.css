@@ -1,8 +1,7 @@
 
 .testimonial-container{
     text-align: center;
-    margin: 22px 0;
-    padding: 60px var(--page-gutter);
+    padding: 30px var(--page-gutter);
     background-color: transparent;
 }
 
