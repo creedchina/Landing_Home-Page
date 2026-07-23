@@ -2,8 +2,10 @@
     background-color: cadetblue;
     display: flex;
     justify-content: space-evenly;
-    padding: 42px;
-    height: 310px;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 42px var(--page-gutter);
+    min-height: 310px;
     position: relative;
 }
 
@@ -15,8 +17,8 @@
 }
 
 .footer-logo>img {
-    height: fit-content;
-    width: 310px;
+    height: auto;
+    width: min(100%, 310px);
 }
 
 .footer-lists {

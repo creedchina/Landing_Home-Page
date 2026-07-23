@@ -1,14 +1,20 @@
 .doctors-container {
     position: relative;
     text-align: center;
-    margin-bottom: 30px;
+    margin: 12px 0;
+    padding: 0 var(--page-gutter) 24px;
+    overflow: hidden;
+    background-color:rgba(62, 161, 255, 0.04);
 }
 
 .doctors-container>h3 {
     text-align: center;
-    font-size: 32px;
     font-weight: normal;
     margin-bottom: 30px;
+    font-size: 3rem;
+    margin: 10px 0 22px;
+    line-height: 1.2;
+    color: #1f2937;
 }
 
 .doctors-container>p {
@@ -22,7 +28,7 @@
 }
 
 .sphere2 {
-    left: -28px;
+    left: 0;
     top: 77px;
 }
 
@@ -45,10 +51,10 @@
     cursor: pointer;
     color: cadetblue; 
     background-color: #FFF;
-    border: 1px solid #174EB2;
+    border: 1px solid cadetblue;
 }
 
 .doctors-container>button:hover {
     color: #FFF;
-    background-color: #174EB2;
+    background-color: cadetblue;
 }

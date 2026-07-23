@@ -1,17 +1,74 @@
+:root {
+  --page-gutter: clamp(16px, 4vw, 32px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
 body{
   height: 100%;
   font-family: "Open Sans", sans-serif;
-  margin: 0;
 }
 
 .app-container{
   display: flex; 
   flex-direction: column;
   min-height: 100vh; 
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .page-content{
-  flex: 1;  
+  flex: 1;
+  scroll-snap-type: y proximity;
+}
+
+.page-section {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  isolation: isolate;
+  opacity: 0;
+  transform: translateY(14px);
+  animation: section-fade-in 0.7s ease forwards;
+}
+
+.page-section > * {
+  width: 100%;
+}
+
+@keyframes section-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-section {
+    min-height: 75vh;
+  }
 }
 
 html{

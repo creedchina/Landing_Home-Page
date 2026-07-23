@@ -6,10 +6,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 
     border-radius: 8px;
     background-color: cadetblue;
-    padding: 0px 20px;
+    padding: 0 var(--page-gutter);
 }
 
 .navbar-logo{
@@ -27,6 +29,7 @@
     background-color: transparent;
     height: 50px;
     width: auto;
+    
 }
 
 .navbar-container a:hover{

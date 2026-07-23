@@ -21,27 +21,27 @@ function App() {
 
         <main className = 'page-content'>
           {/* Each wrapper div needs an ID that perfectly matches the navbar href */}
-          <div id="home">
+          <div id="home" className='page-section'>
             <Hero />
           </div>
 
-          <div id='about'>
+          <div id='about' className='page-section'>
             <AboutUs />
           </div>
 
-          <div id="services">
+          <div id="services" className='page-section'>
             <Services />
           </div>
 
-          <div id="partners">
+          <div id="partners" className='page-section'>
             <Patners />
           </div>
 
-          <div id="news">
+          <div id="news" className='page-section'>
             <News />
           </div>
 
-          <div id="contacts">
+          <div id="contacts" className='page-section'>
             <Contacts />
           </div>
         </main>
