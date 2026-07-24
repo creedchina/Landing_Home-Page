@@ -1,110 +1,190 @@
-
-.user-form{
+.user-form {
+    width: min(1120px, 100%);
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    max-width: 380px;
-    width: 100%;
-    border: 1px solid cadetblue;
-    border-radius: 5px;
-    font: 16px Arial, sans-serif;
-    overflow: hidden;
-    padding: 20px;
-    background-color: linear-gradient(rgba(255, 255, 255, 0.62),  rgb(191, 223, 224));
-    
+    gap: 20px;
+    border-radius: 16px;
+    padding: 32px var(--page-gutter);
+    background-color: transparent;
+    position: relative;
 }
 
-h2{
+.user-form-header {
     text-align: center;
-    margin-bottom: 20px; 
-
 }
 
-.content{
-    display: flex;
-    gap:40px; 
-    align-items: flex-start;
+.user-form-title {
+    margin: 0;
+    font-size: clamp(1.6rem, 2.5vw, 2rem);
+    color: #103137;
 }
 
-.user-form-container{
-    display: flex;
-    width: 100%;
-    border-color: cadetblue;
-    background-color: brown;
-    align-items: center;
-    padding: 20px 20px;
-}
-
-input, 
-textarea{
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-    padding: 8px;
-    margin: 5px 0 5px 0;
-    box-sizing: border-box;
-}
-
-label, 
- input[type = "text"], 
- input[type ="email"]{
-    font-size: 16px;
-    font-weight: bold;
-    display: block;
-    margin: 10px 0 5px 0;
-}
-
-button{
+.user-form-close {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    width: 36px;
+    height: 36px;
+    border: 1px solid cadetblue;
+    border-radius: 8px;
     color: cadetblue;
-    background-color: #FFF;
-    border: 5px solid cadetblue;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    background-color: transparent;
     cursor: pointer;
 }
 
-button:hover{
-    color: #FFF;
-    background-color: #174EB2;
-    transition: all 0.3s ease-out;
-    transform: scale(1.1) translateZ(0);
+.user-form-close:hover {
+    color: #fff;
+    background: cadetblue;
+    transition: all 0.25s ease;
 }
 
-.banner-kids{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: cadetblue;
+.user-form-layout {
+    display: grid;
+    grid-template-columns: minmax(320px, 420px) 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.user-form-container {
+    background-color: transparent;
+    border: 1px solid #e5ecec;
+    border-radius: 14px;
     padding: 24px;
+    box-shadow: 0 8px 24px rgba(10, 40, 52, 0.08);
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.booking-form label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.booking-form input,
+.booking-form textarea {
+    width: 100%;
+    border: 1px solid #cfd8dc;
     border-radius: 8px;
-    margin: 1.5rem 97px;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    font-size: 0.95rem;
+    color: #1f2937;
+    background: #fff;
+}
+
+.booking-form input:focus,
+.booking-form textarea:focus {
+    outline: none;
+    border-color: cadetblue;
+    box-shadow: 0 0 0 3px rgba(95, 158, 160, 0.16);
+}
+
+.booking-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.user-form-submit {
+    margin-top: 6px;
+    color: cadetblue;
+    background-color: aliceblue;
+    border: 1px solid cadetblue;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.user-form-submit:hover {
+    color: aliceblue;
+    background-color: cadetblue;
+    transition: all 0.25s ease-out;
+}
+
+.banner-kids {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border-radius: 12px;
+    padding: 8px 4px;
 }
 
 .banner-kids h3 {
-    width: 100%;
-    text-align: center;
-    margin: 0 0 1rem 0;
-    font-size: 1.3rem;
-}
-
-
-.banner-kids:hover{
-    transition: all 0.3s ease-out;
-    transform: scale(1.05) translateZ(0);
+    margin: 0;
+    font-size: clamp(1.1rem, 1.9vw, 1.5rem);
+    font-weight: 600;
+    color: #1f2937;
+    text-align: left;
 }
 
 .banner-pic {
-    display: flex;
-    align-items: center; 
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
 }
 
-.banner-pic > img{
-    flex: 1;
-    width: 420px;
-    height: 350px;
+.banner-pic > img {
+    width: 100%;
+    height: clamp(170px, 20vw, 230px);
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 12px;
+}
+
+@media (max-width: 900px) {
+    .user-form {
+        padding: 24px 16px;
+    }
+
+    .user-form-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .user-form-container {
+        order: 1;
+    }
+
+    .banner-kids {
+        order: 2;
+    }
+
+    .banner-kids h3 {
+        text-align: center;
+    }
+
+    .banner-pic {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-pic > img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 520px) {
+    .form-field-row {
+        grid-template-columns: 1fr;
+    }
+
+    .user-form-container {
+        padding: 18px;
+    }
 }
    

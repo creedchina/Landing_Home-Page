@@ -44,84 +44,99 @@ export default function UserForm({ onClose }){
 
   return (
     <div className="user-form">
- 
+      {onClose && (
         <button
-            type='button'
-            className='close-btn'
-            onClick={onClose}
-            >
-              X
+          type='button'
+          className='user-form-close'
+          onClick={onClose}
+          aria-label='Close form'
+        >
+          X
         </button>
+      )}
 
-      <h2>
-        User Information
-      </h2>
+      <header className="user-form-header">
+        <h2 className="user-form-title">
+          User Information
+        </h2>
+      </header>
 
-      <div className='content'>
-      
-      <div className = "user-form-container">
-        
-        <form onSubmit={handleSubmit}>
-        
-          <label htmlFor="username">
-            Name:
-          </label>
-        
-          <input
-            type="text"
-            id="username"
-            name="name"
-            value={bookingForm.name || ""}
-            onChange={handleChange}
-            />
-        
-          <label htmlFor="message">
-            Date:
-          </label>
-        
-          <input 
-            type="date" 
-            name="date" 
-            value={bookingForm.date || ""} onChange={handleChange} 
-            />
-            
-          <label htmlFor="message">
-            Time:
-          </label>
+      <div className='user-form-layout'>
+        <div className="user-form-container">
+          <form className="booking-form" onSubmit={handleSubmit}>
+            <div className="form-field">
+              <label htmlFor="username">
+                Name:
+              </label>
+              <input
+                type="text"
+                id="username"
+                name="name"
+                value={bookingForm.name || ""}
+                onChange={handleChange}
+              />
+            </div>
 
-          <input 
-            type="time" 
-            name="time" 
-            value={bookingForm.time || ""} onChange={handleChange} 
-            />
+            <div className="form-field-row">
+              <div className="form-field">
+                <label htmlFor="appointment-date">
+                  Date:
+                </label>
+                <input
+                  type="date"
+                  id="appointment-date"
+                  name="date"
+                  value={bookingForm.date || ""}
+                  onChange={handleChange}
+                />
+              </div>
 
-          <label htmlFor="message">
-            Message:
-          </label>
+              <div className="form-field">
+                <label htmlFor="appointment-time">
+                  Time:
+                </label>
+                <input
+                  type="time"
+                  id="appointment-time"
+                  name="time"
+                  value={bookingForm.time || ""}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
 
-          <textarea
-            id="message"
-            name="message"
-            value={bookingForm.message || ""}
-            onChange={handleChange}
-          />
+            <div className="form-field">
+              <label htmlFor="message">
+                Message:
+              </label>
 
-          <button 
-            type="submit">
+              <textarea
+                id="message"
+                name="message"
+                value={bookingForm.message || ""}
+                onChange={handleChange}
+                rows={4}
+              />
+            </div>
+
+            <button
+              className="user-form-submit"
+              type="submit"
+            >
               Submit
-          </button>
-        </form>
-      </div>
-      </div>
-
-        <div className="banner-kids">
-                    <h3>Before, during and after your stay</h3>
-                    <div className="banner-pic">
-                        <img src={before} alt="kid_1"/>
-                        <img src={during} alt="kid_2"/>
-                        <img src={after} alt="kid_3"/>
-                    </div>
+            </button>
+          </form>
         </div>
+
+        <aside className="banner-kids">
+          <h3>Before, during and after your stay</h3>
+          <div className="banner-pic">
+            <img src={before} alt="Patient before treatment"/>
+            <img src={during} alt="Patient during treatment"/>
+            <img src={after} alt="Patient after treatment"/>
+          </div>
+        </aside>
+      </div>
 
     </div>
   );
