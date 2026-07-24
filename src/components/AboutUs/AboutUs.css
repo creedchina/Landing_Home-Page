@@ -204,6 +204,14 @@
         gap: 24px;
     }
 
+    .about-content {
+        order: 1;
+    }
+
+    .about-image {
+        order: 2;
+    }
+
     .about-image,
     .about-content,
     .about-metrics {

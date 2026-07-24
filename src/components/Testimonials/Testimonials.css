@@ -2,7 +2,6 @@
 .testimonial-container{
     text-align: center;
     padding: 30px var(--page-gutter);
-    background-color: transparent;
 }
 
 .testimonial-container>h3{
@@ -51,7 +50,7 @@
 }
 
 .testimonial-card> span{
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     color: #1a1a1a;
 }

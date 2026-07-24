@@ -24,12 +24,24 @@ function NavBar(){
             </div>
 
             <div className="navbar-items">  
-                <a href="#home" onClick={(e) => handleScroll(e, 'home')}>Home</a>
-                <a href="about" onClick={(e) => handleScroll(e, 'about')}>About Us</a>
-                <a href="#services" onClick={(e) => handleScroll(e, 'services')}>Services</a>
-                <a href="#partners" onClick={(e) => handleScroll(e, 'partners')}>Partners</a>
-                <a href="#news" onClick={(e) => handleScroll(e, 'news')}>News</a>
-                <a href="#contacts" onClick={(e) => handleScroll(e, 'contacts')}>Contacts</a>
+                <a href="#home" onClick={(e) => handleScroll(e, 'home')}>
+                    Home
+                </a>
+                <a href="#about" onClick={(e) => handleScroll(e, 'about')}>
+                    About Us
+                </a>
+                <a href="#services" onClick={(e) => handleScroll(e, 'services')}>
+                    Services
+                </a>
+                <a href="#partners" onClick={(e) => handleScroll(e, 'partners')}>
+                    Partners
+                </a>
+                <a href="#news" onClick={(e) => handleScroll(e, 'news')}>
+                    News
+                </a>
+                <a href="#contacts" onClick={(e) => handleScroll(e, 'contacts')}>
+                    Contacts
+                </a>
             </div>
 
             <button className="menu-btn">

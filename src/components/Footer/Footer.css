@@ -3,7 +3,8 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 5px;
+    border-radius: 12px;
     padding: 42px var(--page-gutter);
     min-height: 310px;
     position: relative;
@@ -13,12 +14,12 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 12px;
+    gap: 8px;
 }
 
 .footer-logo>img {
-    height: auto;
-    width: min(100%, 310px);
+    width: 125px;
+    height: 130px;
 }
 
 .footer-lists {
@@ -35,9 +36,8 @@
 }
 
 .footer-lists>li {
-    cursor: pointer;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .footer-ellipse1, .footer-ellipse2 {
@@ -59,8 +59,11 @@
     height: 50px;
 }
 
-.footer-bottom>p {
-    cursor: pointer;
+.footer-medic a{
+    font-weight: 300;
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
 }
 
 @media screen and (max-width: 768px) {

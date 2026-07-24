@@ -18,7 +18,7 @@ const Testimonials = () => {
 
                 <div className="testimonial-card">
                     <img src={medical_Patient_1} alt="medical_Patient_1"/>
-                    <p>"The doctors were incredibly professional and caring.<br />
+                    <p>"The doctors were incredibly professional and caring.
                      I received excellent treatment from start to finish."</p>
                     <span>— Sarah M.</span>
                 </div>          
