@@ -7,7 +7,7 @@ const Service = () => {
         <div className="services-section">
 
         {services.map((service) => (
-            <div className="service-container">
+            <div className="service-container" key={service.name}>
 
                 <div className="service-icons">
                     <img src={service.image} alt="Service Icon" className="service-icon" />
@@ -22,11 +22,9 @@ const Service = () => {
                 </div>
             </div>
         
-        )
-    )
-}
+        ))}
         </div>
-    )
-}
+    );
+};
 
 export default Service;

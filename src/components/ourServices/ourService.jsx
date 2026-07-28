@@ -7,10 +7,10 @@ import pricing from "../../assets/images/pricing.jpg"
 import kid_2 from "../../assets/images/kid_2.jpg"
 import emergency_room from "../../assets/images/emergency_room.jpg"
 import massage from "../../assets/images/massage.jpg"
-
 import { Link } from 'react-router-dom'
 
 const OurService = () => {
+
     return (
         <div className="ourService-container">
 
@@ -72,10 +72,9 @@ const OurService = () => {
                         />
 
                     </div>
-                             <Link to="/Service" className="btn-explore">
+                             <Link to="/services" className="btn-explore">
                                     Explore More
                              </Link>
-
                     
         </div>
     )
