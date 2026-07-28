@@ -63,6 +63,12 @@ form{
     background-color: cadetblue;
 }
 
+.error-text {
+    color: #c0392b;
+    font-size: 0.9rem;
+    margin: -6px 0 0;
+}
+
 .contact-list-section{
     text-align: left;
     text-justify: inherit;

@@ -1,5 +1,6 @@
 import './UserForm.css';
 import {useState, useEffect} from 'react';
+import emailjs from '@emailjs/browser'; 
 import before from "../../assets/images/before.jpg"
 import during from "../../assets/images/during.jpg"
 import after from "../../assets/images/after.jpg"
@@ -8,7 +9,12 @@ export default function UserForm({ onClose }){
 
   const [bookingForm, setBookingForm] = useState(() => {
     const savedData = localStorage.getItem("bookingApplication"); 
-    return savedData ? JSON.parse(savedData) : {}; 
+    return savedData ? JSON.parse(savedData) : {
+      name: "",
+      date: "", 
+      time: "", 
+      message: "", 
+    }; 
   }); 
 
   useEffect(() => {
@@ -22,26 +28,66 @@ export default function UserForm({ onClose }){
   })); 
 }; 
 
-  const handleSubmit = (e) => { 
+  const handleSubmit = async (e) => { 
     e.preventDefault();   
-      if(!bookingForm.name){
+
+    const name = bookingForm.name?.trim() ?? "";
+    const date = bookingForm.date?.trim() ?? "";
+    const time = bookingForm.time?.trim() ?? "";
+    const message = bookingForm.message?.trim() ?? "";
+
+      if(!name){
         alert("Please enter your Name."); 
         return; 
       }
-      if(!bookingForm.date){
+      if(!date){
         alert("Please select a date");
         return; 
       }
-      if(!bookingForm.time){
+      if(!time){
         alert('Please select a time'); 
         return; 
       }
-      if(!bookingForm.message){
+      if(!message){
         alert("Please enter a message."); 
         return; 
       }
-  }; 
 
+      const templateParams = {
+      name,
+      date,
+      time,
+      message
+    }; 
+
+    setBookingForm({
+      name: "",
+      date: "", 
+      time: "", 
+      message: "", 
+    });
+    localStorage.removeItem("bookingApplication");
+
+    try{
+
+      await emailjs.send(    
+            "service_la8nlvo", // this tells the EmailJS which email service to use (e.g., Gmail, Outlook, etc.)
+            "template_g6q83c9", // this tells EmailJS which email template to use for sending the email
+            templateParams, // the data to be sent in the email, which includes the user's name, date, time, and message
+            "UFDAefszT8u1qLjxI"); // this is the public key provided by EmailJS for authentication and authorization when sending emails from the client-side application
+
+            alert("Your message has been submitted successfully!");
+    
+          }catch(error){
+
+      console.log("Error sending email: ", error); 
+      console.log("EmailJS Error:", error);
+      console.log("Status:", error.status);
+      console.log("Text:", error.text);
+      alert("Email could not be sent.");
+    }
+
+  };
   return (
     <div className="user-form">
       {onClose && (
