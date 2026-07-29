@@ -1,5 +1,7 @@
 import './ourService.css'
 // import Service from '../services/Service'
+import {useState} from 'react'
+import services from '../../assets/services' 
 import FlipCard from '../flipcard/Flipcard'
 import modern_Tech from "../../assets/images/modern_Tech.jpg"
 import emergency_med from "../../assets/images/emergency_med.jpg"
@@ -7,9 +9,11 @@ import pricing from "../../assets/images/pricing.jpg"
 import kid_2 from "../../assets/images/kid_2.jpg"
 import emergency_room from "../../assets/images/emergency_room.jpg"
 import massage from "../../assets/images/massage.jpg"
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 const OurService = () => {
+
+    const [showMore, setShowMore] = useState(false);
 
     return (
         <div className="ourService-container">
@@ -72,9 +76,26 @@ const OurService = () => {
                         />
 
                     </div>
-                             <Link to="/services" className="btn-explore">
-                                    Explore More
-                             </Link>
+                             <button className="btn-explore" 
+                                onClick={() => setShowMore(!showMore)}
+                                >
+                                    {showMore ? "Show Less" : "Explore More"}
+                             </button>
+                                {
+                                    showMore && (
+                                        <div className="additional-services">
+
+                                                {services.map((service, index) => (
+                                                    <div className="service-container" key={index}>
+                                                        <img src={service.image} alt={service.name} />
+                                                        <h4>{service.name}</h4>
+                                                        <p>{service.body}</p>
+                                                    </div>
+                                                ))}
+                                        </div>
+                                    )
+                                }
+
                     
         </div>
     )

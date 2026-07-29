@@ -67,6 +67,7 @@
     text-align: center;
     align-self: center;
     margin-top: 30px;
+    border: none;
 }
 
 .btn-explore:hover,
@@ -77,6 +78,26 @@
     transition: all 0.3s ease-out;
     transform: scale(1.1) translateZ(0);
 
+}
+
+.additional-services {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(35px,1fr));
+    gap: 25px;
+    margin-top: 20px;
+    
+}
+
+.additional-services .service-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
 }
 
 /* .service-grid > *:hover {

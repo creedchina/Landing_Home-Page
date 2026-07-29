@@ -3,7 +3,7 @@ import selfcare from "../assets/images/selfcare.png"
 import laboratory from "../assets/images/laboratory.png"
 import treatment from "../assets/images/treatment.png"
 import pethealth from "../assets/images/pethealth.png"
-import symptoms from "../assets/images/symptoms.png"
+// import symptoms from "../assets/images/symptoms.png"
 import checkup from "../assets/images/checkup.png"
 
 const services = [
@@ -33,12 +33,12 @@ const services = [
         name: "Laboratory",
         body: "“Compassion Always,” “Health Matters Here,” and “Care You Trust”."
     },
-    {
-        id: 5,
-        image: treatment,
-        name: "Treatment",
-        body: "“Compassion Always,” “Health Matters Here,” and “Care You Trust”."
-    },
+    // {
+    //     id: 5,
+    //     image: treatment,
+    //     name: "Treatment",
+    //     body: "“Compassion Always,” “Health Matters Here,” and “Care You Trust”."
+    // },
 
     {
         id: 6,
@@ -47,12 +47,12 @@ const services = [
         body: "“Compassion Always,” “Health Matters Here,” and “Care You Trust”."
     },
 
-    {
-        id: 7,
-        image: symptoms,
-        name: "Symptoms",
-        body: "“Compassion Always,” “Health Matters Here,” and “Care You Trust”."
-    },
+    // {
+    //     id: 7,
+    //     image: symptoms,
+    //     name: "Symptoms",
+    //     body: "“Compassion Always,” “Health Matters Here,” and “Care You Trust”."
+    // },
 
     {
         id: 8,
