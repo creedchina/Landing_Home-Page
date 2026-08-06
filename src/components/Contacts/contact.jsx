@@ -1,31 +1,46 @@
 import { useEffect, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import './contact.css'
+import Modal from '../Modal/Modal'
 
 export default function Contact() {
-  const [contactForm, setContactForm] = useState(() => {
-    
-    const savedData = localStorage.getItem('ContactApplication')
-    return savedData ? JSON.parse(savedData) : {
-      name: '', 
-      surname: '',
-      email: '',
-      date: '',
-      query: '',
+
+    const [contactForm, setContactForm] = useState(() => {
+      
+      const savedData = localStorage.getItem('ContactApplication')
+        return savedData ? JSON.parse(savedData) : {
+          name: '', 
+          surname: '',
+          email: '',
+          date: '',
+          message: '',
+        }
     }
-  })
+  );
 
-  useEffect(() => {
-    localStorage.setItem('ContactApplication', JSON.stringify(contactForm))
-  }, [contactForm])
+        const [modalOpen, setModalOpen] = useState(false);
+        const [modalTitle, setModalTitle] = useState("");
+        const [modalMessage, setModalMessage] = useState("");
+        const [modalType, setModalType] = useState("");
 
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setContactForm((currentData) => ({
-      ...currentData,
-      [name]: value,
-    }));
-  };
+        const showModal = (title, message, type) => {
+          setModalTitle(title);
+          setModalMessage(message);
+          setModalType(type);
+          setModalOpen(true);
+        };
+
+    useEffect(() => {
+      localStorage.setItem('ContactApplication', JSON.stringify(contactForm))
+    }, [contactForm])
+
+    const handleChange = (e) => {
+      const { name, value } = e.target
+      setContactForm((currentData) => ({
+        ...currentData,
+        [name]: value,
+      }));
+    };
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -34,36 +49,60 @@ export default function Contact() {
     const surname = contactForm.surname?.trim() ?? ''
     const email = contactForm.email?.trim() ?? ''
     const date = contactForm.date?.trim() ?? ''
-    const query = contactForm.query?.trim() ?? ''
+    const message = contactForm.message?.trim() ?? ''
 
     if (!name) {
-      alert('Please enter your Name.')
-      return
+      showModal(
+          "Validation Error",
+          "Please enter your Name.",
+          "error"
+        );
+        return;
     }
 
     if (!surname) {
-      alert('Please enter your Surname.')
-      return
-    }
+    showModal(
+          "Validation Error",
+          "Please enter your Surname.",
+          "error"
+        );
+        return;
+      }
 
     if (!email) {
-      alert('Please enter your Email.')
-      return
+     showModal(
+          "Validation Error",
+          "Please enter your Email.",
+          "error"
+        );
+        return;
     }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      alert('Please enter a valid Email.')
-      return
+      showModal(
+          "Validation Error",
+          "Please enter a valid Email.",
+          "error"
+        );
+        return;
     }
 
     if (!date) {
-      alert('Please select an Admission Date.')
-      return
+        showModal(
+          "Validation Error",
+          "Please select a date.",
+          "error"
+        );
+        return;
     }
 
-    if (!query) {
-      alert('Please enter your Query.')
-      return
+    if (!message) {
+    showModal(
+          "Validation Error",
+          "Please enter a message.",
+          "error"
+        );
+        return;
     }
 
     const templateParams = {
@@ -71,10 +110,11 @@ export default function Contact() {
       surname,
       email,
       date,
-      query,
-    }
+      message,
+    }; 
 
     try {
+
       await emailjs.send(
         'service_flhrx4p',
         'template_gl5jssv',
@@ -87,7 +127,7 @@ export default function Contact() {
         surname: '',
         email: '',
         date: '',
-        query: '',
+        message: '',
       });
 
       localStorage.removeItem('ContactApplication');
@@ -97,7 +137,7 @@ export default function Contact() {
       console.error('EmailJS Error:', error)
       alert('Email could not be sent. Please try again later.')
     }
-  }
+  }; 
 
   return (
     <div className='contact-us-container'>
@@ -153,11 +193,11 @@ export default function Contact() {
               required
             />
 
-            <label htmlFor='query'>Query:</label>
+            <label htmlFor='message'>Message:</label>
             <textarea
-              id='query'
-              name='query'
-              value={contactForm.query || ''}
+              id='message'
+              name='message'
+              value={contactForm.message || ''}
               onChange={handleChange}
               required
             />
@@ -173,7 +213,14 @@ export default function Contact() {
           </p>
         </div>
       </div>
+      
+          <Modal
+            isOpen={modalOpen}
+            title={modalTitle}
+            message={modalMessage}
+            type={modalType}
+            onClose={() => setModalOpen(false)}
+          />
     </div>
-  )
+  ); 
 }
-

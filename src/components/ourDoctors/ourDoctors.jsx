@@ -26,7 +26,12 @@ const Doctors = () => {
             <Doctor />
         </div>
 
-        <button>Explore More</button>
+        <button
+          className="partner-btn"
+          onClick={() => window.location.href = "mailto:partnerships@medical.co.za"}
+      >
+          Become a Partner
+        </button>
 
     </div>
   )
